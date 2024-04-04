@@ -1,3 +1,5 @@
+package gui;
+
 import java.sql.*;
 
 public class jdbc {
@@ -5,7 +7,7 @@ public class jdbc {
     public static void main(String[] args) {
         try{
             Connection connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/appointment",
+                    "gui.jdbc:mysql://localhost:3306/appointment",
                     "root", "brylle1234"
             );
             Statement statement = connection.createStatement();
