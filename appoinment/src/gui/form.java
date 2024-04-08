@@ -5,6 +5,7 @@ import constant.commonconstant;
 import javax.swing.*;
 public class form extends JFrame {
     public  form (String title){
+        //The main gui panel
         super(title);
         setSize(520, 686);
 

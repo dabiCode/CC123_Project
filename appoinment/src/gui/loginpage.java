@@ -1,9 +1,12 @@
 package gui;
 
 import constant.commonconstant;
+import db.MyJDBC;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -25,6 +28,7 @@ public class loginpage extends form {
 
         add(loginlabel);
 
+         //username label for the the users that have registered account
         JLabel usernamelabel = new JLabel("Username:");
         usernamelabel.setBounds(30, 150, 400, 25);
         usernamelabel.setForeground(commonconstant.TEXT_COLOR);
@@ -39,6 +43,7 @@ public class loginpage extends form {
         add(usernamelabel);
         add(usernameField);
 
+        //password label
         JLabel passwordlabel = new JLabel("Password:");
         passwordlabel.setBounds(30, 335, 400, 25);
         passwordlabel.setFont(new Font("Dialog",Font.PLAIN, 18));
@@ -53,14 +58,34 @@ public class loginpage extends form {
         add(passwordlabel);
         add(passwordField);
 
+        //for the login button
         JButton loginButton = new JButton("Login");
         loginButton.setFont(new Font("Dialog", Font.BOLD, 18));
 
         loginButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         loginButton.setBackground(commonconstant.TEXT_COLOR);
         loginButton.setBounds(125, 520, 250,50);
+        loginButton.addActionListener(new ActionListener() {
+         @Override
+         public void actionPerformed(ActionEvent e) {
+          //users database validation
+          String username = usernameField.getText();
+
+          String password = new String(passwordField.getPassword());
+
+          if(MyJDBC.validatelogin(username, password)){
+
+           JOptionPane.showMessageDialog(loginpage.this, "Login Successful!");
+
+          }else {
+
+           JOptionPane.showMessageDialog(loginpage.this, "Login Failed...");
+          }
+         }
+        });
         add(loginButton);
 
+        //for account registration
         JLabel registerLabel = new JLabel("Not a user? Register Here");
         registerLabel.setHorizontalAlignment(SwingConstants.CENTER);
         registerLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
