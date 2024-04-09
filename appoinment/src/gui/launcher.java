@@ -12,7 +12,7 @@ public class launcher {
             public void run() {
                 new register().setVisible(true);
                  new loginpage().setVisible(true);
-
+//
 
 //new menu().setVisible(true);
               // System.out.println(MyJDBC.checkuser("username1234"));

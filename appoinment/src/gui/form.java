@@ -10,7 +10,7 @@ public class form extends JFrame {
         setSize(850, 686);
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-
+//
         setLayout(null);
 
         setResizable(false);

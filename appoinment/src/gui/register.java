@@ -46,7 +46,7 @@ public class register extends form{
         usernameField.setBackground(commonconstant.SECONDARY_COLOR);
         usernameField.setForeground(commonconstant.TEXT_COLOR);
         usernameField.setFont(new Font("Dialog", Font.PLAIN, 24));
-
+//
         add(usernamelabel);
         add(usernameField);
 

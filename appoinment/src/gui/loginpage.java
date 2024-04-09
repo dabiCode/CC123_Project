@@ -17,7 +17,7 @@ public class loginpage extends form {
 
     }
 
-
+//
     private void addGuiComponents(){
      ImageIcon logoIcon = new ImageIcon("C:\\Users\\jerzy\\OneDrive\\Documents\\GitHub\\CC123_Project\\appoinment\\src\\image\\434024649_1363976920953749_3166889348485858378_n.png"); // Replace "path_to_your_logo_image_file.jpg" with the actual path to your image file
 
