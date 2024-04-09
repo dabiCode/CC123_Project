@@ -7,10 +7,10 @@ public class form extends JFrame {
     public  form (String title){
         //The main gui panel
         super(title);
-        setSize(520, 686);
+        setSize(850, 686);
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-
+//
         setLayout(null);
 
         setResizable(false);
