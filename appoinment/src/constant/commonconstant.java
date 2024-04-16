@@ -8,7 +8,11 @@ public class commonconstant {
     public static final Color PRIMARY_COLOR = Color.decode("#AEC6CF");
     //white
     public static final Color SECONDARY_COLOR = Color.decode("#FFFFFF");
+
+    //black
     public static final Color TEXT_COLOR = Color.decode("#000000");
+
+    //white
     public static final Color BLUE_COLOR = Color.decode("#FFFFFF");
     //pastel blue
     public static final Color BUTTON_COLOR = Color.decode("#ADD8E6");
