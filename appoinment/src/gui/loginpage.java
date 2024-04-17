@@ -85,8 +85,11 @@ public class loginpage extends form {
           String password = new String(passwordField.getPassword());
 
           if(MyJDBC.validatelogin(username, password)){
+              loginpage.this.dispose();
 
-           JOptionPane.showMessageDialog(loginpage.this, "Login Successful!");
+              new home().setVisible(true);
+
+              JOptionPane.showMessageDialog(loginpage.this, "Login Successful!");
 
           }else {
 

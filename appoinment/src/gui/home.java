@@ -3,6 +3,8 @@ import constant.commonconstant;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class home extends homepage {
     public home(){
@@ -40,6 +42,16 @@ public class home extends homepage {
 
         features.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         features.setForeground(commonconstant.TEXT_COLOR);
+        //set mouse listener
+        features.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                home.this.dispose();
+
+                new Features().setVisible(true);
+            }
+        });
+
         features.setBounds(400, 150, 150,25);
 
         JButton about= new JButton("About Us");
@@ -47,6 +59,16 @@ public class home extends homepage {
 
         about.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         about.setForeground(commonconstant.TEXT_COLOR);
+        //set mouse listener
+        about.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                home.this.dispose();
+
+                new About().setVisible(true);
+            }
+        });
+
         about.setBounds(550, 150, 160,25);
 
         JButton signin= new JButton("Logout");
@@ -55,6 +77,14 @@ public class home extends homepage {
         signin.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         signin.setForeground(commonconstant.TEXT_COLOR);
         signin.setBackground(commonconstant.BUTTON_COLOR);
+        signin.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                home.this.dispose();
+
+                new loginpage().setVisible(true);
+            }
+        });
         signin.setBounds(680, 150, 150,25);
 
 
@@ -98,6 +128,9 @@ public class home extends homepage {
         Appoinment.setFont(new Font("Dialog", Font.BOLD, 30));
         Appoinment.setHorizontalAlignment(SwingConstants.CENTER);
 
+
+
+
         add(Appoinment);
 
         JButton book = new JButton("Book Now");
@@ -105,6 +138,16 @@ public class home extends homepage {
 
         book.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         book.setForeground(commonconstant.TEXT_COLOR);
+        //set mouse listener
+        Appoinment.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                home.this.dispose();
+
+                new Appoinment().setVisible(true);
+            }
+        });
+
         book.setBounds(450, 300, 100,20);
 
         add(book);

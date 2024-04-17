@@ -5,7 +5,7 @@ import constant.commonconstant;
 import java.sql.*;
 
 public class userDb {
-    public static boolean menu(int id,String last_name, String first_name, String midlle_name, String time){
+    public static boolean book(int id,String last_name, String first_name, String midlle_name, String time){
         try{
             if (!checkuser(id)) {
                 Connection connection = DriverManager.getConnection(commonconstant.DB_USER, commonconstant.DB_USERNAME,commonconstant.DB_PASSWORD);
@@ -43,7 +43,7 @@ public class userDb {
     public static boolean validateuser(int id, String last_name, String first_name, String midlle_name, String time) {
         try {
             Connection connection = DriverManager.getConnection(commonconstant.DB_USER, commonconstant.DB_USERNAME, commonconstant.DB_PASSWORD);
-            PreparedStatement insertUser = connection.prepareStatement("INSERT INTO " + commonconstant.DB_USER_INFO + "(user_id, last_name,first_name, m_i, time)" + "VALUES(?, ?, ?, ?, ?)");
+            connection.prepareStatement("INSERT INTO " + commonconstant.DB_USER_INFO + "(user_id, last_name,first_name, m_i, time)" + "VALUES(?, ?, ?, ?, ?)");
 
             PreparedStatement validate = connection.prepareStatement(
                     "SELECT * FROM " + commonconstant.DB_USER_INFO + " WHERE user_id = ? AND last_name = ? AND first_name = ? AND m_i = ? AND time = ? "
