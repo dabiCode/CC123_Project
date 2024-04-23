@@ -13,17 +13,33 @@ public class home extends homepage {
 
     }
 
+
+
+
+
+
     private void addGuiComponents() {
-        JLabel menulabel = new JLabel("HealthAppointment");
+        JLabel menulabel = new JLabel("Health");
 
         menulabel.setBounds(0, 20, 400, 100);
-        menulabel.setForeground(commonconstant.PRIMARY_COLOR.brighter());
+        menulabel.setForeground(commonconstant.HOME_BG1_BLUE);
 
         menulabel.setFont(new Font("Dialog", Font.BOLD, 20));
 
         menulabel.setHorizontalAlignment(SwingConstants.CENTER);
 
         add(menulabel);
+
+        JLabel menulabel2 = new JLabel("Appointment");
+
+        menulabel2.setBounds(91, 20, 400, 100);
+        menulabel2.setForeground(commonconstant.TEXT_COLOR);
+
+        menulabel2.setFont(new Font("Dialog", Font.BOLD, 20));
+
+        menulabel2.setHorizontalAlignment(SwingConstants.CENTER);
+
+        add(menulabel2);
 
 
         //new time menu for the time selection mode
@@ -34,7 +50,7 @@ public class home extends homepage {
 
         home.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         home.setForeground(commonconstant.TEXT_COLOR);
-        home.setBounds(320, 150, 100,25);
+        home.setBounds(610, 150, 100,25);
         //reserved space for database
 
         JButton features= new JButton("Features");
@@ -52,7 +68,7 @@ public class home extends homepage {
             }
         });
 
-        features.setBounds(400, 150, 150,25);
+        features.setBounds(700, 150, 150,25);
 
         JButton about= new JButton("About Us");
         about.setFont(new Font("Dialog", Font.BOLD, 18));
@@ -69,7 +85,7 @@ public class home extends homepage {
             }
         });
 
-        about.setBounds(550, 150, 160,25);
+        about.setBounds(850, 150, 160,25);
 
         JButton signin= new JButton("Logout");
         signin.setFont(new Font("Dialog", Font.BOLD, 18));
@@ -85,7 +101,7 @@ public class home extends homepage {
                 new loginpage().setVisible(true);
             }
         });
-        signin.setBounds(680, 150, 150,25);
+        signin.setBounds(1000, 150, 150,25);
 
 
         add(signin);
@@ -197,6 +213,41 @@ public class home extends homepage {
         add(emergency);
         add(contact);
 
+        JPanel panel1 = new JPanel();
+        panel1.setLayout(new BorderLayout());
+
+        JLabel panelLabel = new JLabel();
+        panel1.add(panelLabel, BorderLayout.CENTER);
+
+        // Set the size and location of the panel
+        panel1.setBounds(0, 0, 1300, 200);
+
+        // Add the panel to the main container
+        add(panel1);
+
+        JPanel panel2 = new JPanel();
+        panel2.setLayout(new BorderLayout());
+
+        JLabel panelLabel2 = new JLabel();
+        panel2.add(panelLabel, BorderLayout.CENTER);
+        panel2.setBackground(commonconstant.HOME_BG1_GRAY);
+        // Set the size and location of the panel
+        panel2.setBounds(0, 200, 630, 600);
+
+        // Add the panel to the main container
+        add(panel2);
+
+        JPanel panel3 = new JPanel();
+        panel2.setLayout(new BorderLayout());
+
+        JLabel panelLabel3 = new JLabel();
+        panel3.add(panelLabel, BorderLayout.CENTER);
+        panel3.setBackground(commonconstant.HOME_BG1_BLUE);
+        // Set the size and location of the panel
+        panel3.setBounds(600, 200, 650, 600);
+
+        // Add the panel to the main container
+        add(panel3);
     }
 
 

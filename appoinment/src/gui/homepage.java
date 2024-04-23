@@ -8,7 +8,7 @@ public class homepage extends JFrame {
     public homepage (String title) {
         //The main gui panel
         super(title);
-        setSize(850, 686);
+        setSize(1250, 800);
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 //
@@ -17,5 +17,7 @@ public class homepage extends JFrame {
         setResizable(false);
 
         getContentPane().setBackground(commonconstant.BUTTON_COLOR);
+
+
         }
     }
