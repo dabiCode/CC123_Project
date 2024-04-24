@@ -24,6 +24,9 @@ public class commonconstant {
 
     public static final Color HOME_BG1_GRAYISH = Color.decode("#aec6cf");
 
+
+
+
     // mySQL server connector
     public static final String DB_URL = "jdbc:mysql://127.0.0.1:3306/user_schema";
     public static final String DB_USER = "jdbc:mysql://127.0.0.1:3306/user_registration";
