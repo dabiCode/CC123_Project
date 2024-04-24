@@ -60,7 +60,7 @@ public class About extends homepage{
 
 
         add(home);
-
+//
         JLabel text = new JLabel("About us!");
         text.setBounds(100, 180, 400, 100);
         text.setForeground(commonconstant.TEXT_COLOR.brighter());
