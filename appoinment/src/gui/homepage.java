@@ -18,6 +18,5 @@ public class homepage extends JFrame {
 
         getContentPane().setBackground(commonconstant.BUTTON_COLOR);
 
-
         }
     }

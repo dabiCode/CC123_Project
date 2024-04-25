@@ -20,14 +20,24 @@ public class launcher {
 
 
 
+<<<<<<< HEAD
+//new loginpage().setVisible(true);
+=======
                 new loginpage().setVisible(true);
+>>>>>>> 18b233b53ec4f6f0a0b4329a327c6d10cc3a0b61
 //new menu().setVisible(true);
                //new register().setVisible(true);
                 //new Appoinment().setVisible(true);
 //new Features().setVisible(true);
+<<<<<<< HEAD
+   new home().setVisible(true);
+
+              // new register().setVisible(true);
+=======
            new home().setVisible(true);
 
                new register().setVisible(true);
+>>>>>>> 18b233b53ec4f6f0a0b4329a327c6d10cc3a0b61
                 //new Appoinment().setVisible(true);
 //new Features().setVisible(true);
             //new home().setVisible(true);
