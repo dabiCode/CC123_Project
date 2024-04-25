@@ -63,15 +63,36 @@ public class About extends homepage{
                 new home().setVisible(true);
             }
         });
-
-        home.setBounds(950, 70, 100, 25);
+        home.setBounds(760, 130, 150, 25);
         //reserved space for database
-
-
-
-
         add(home);
-//
+
+     JButton about1 = new JButton("About us");
+     about1.setFont(new Font("Dialog", Font.BOLD, 18));
+     about1.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+     about1.setForeground(commonconstant.TEXT_COLOR);
+     about1.setBounds(910, 130, 150, 25);
+     //reserved space for database
+     add(about1);
+
+     JButton logout = new JButton("Logout");
+     logout.setFont(new Font("Dialog", Font.BOLD, 18));
+     logout.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+     logout.setForeground(commonconstant.TEXT_COLOR);
+     logout.addMouseListener(new MouseAdapter() {
+      @Override
+      public void mouseClicked(MouseEvent e) {
+       About.this.dispose();
+
+       new loginpage().setVisible(true);
+      }
+     });
+     logout.setBounds(1060, 130, 150, 25);
+     //reserved space for database
+     add(logout);
+
+
+
         JLabel text = new JLabel("About us!");
         text.setBounds(100, 180, 400, 100);
         text.setForeground(commonconstant.TEXT_COLOR.brighter());

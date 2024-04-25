@@ -5,6 +5,14 @@
   </component>
   <component name="ChangeListManager">
 
+    <list default="true" id="e1b7777b-7ed8-46db-9dff-107d395bfc2f" name="Changes" comment="Merge branch 'main' into master">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/About.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/About.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/home.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/launcher.java" afterDir="false" />
+    </list>
+
+
     <list default="true" id="e1b7777b-7ed8-46db-9dff-107d395bfc2f" name="Changes" comment="new">
       <change afterPath="$PROJECT_DIR$/appoinment/src/gui/typeAppointment.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/appoinment/src/image/codepics.jpeg" afterDir="false" />
@@ -25,6 +33,7 @@
     </list>
 
     <list default="true" id="e1b7777b-7ed8-46db-9dff-107d395bfc2f" name="Changes" comment="Merge branch 'main' into master" />
+
 
 
     <option name="SHOW_DIALOG" value="false" />
@@ -63,11 +72,17 @@
     <option name="stateVersion" value="1" />
   </component>
 
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+
+
 
 
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
+
 
 
 
@@ -82,6 +97,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.App.executor&quot;: &quot;Run&quot;,
+    &quot;Application.launcher.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/NT371B5L/OneDrive/Documents/GitHub/CC123_Project/appointment/lib/mysql-connector-j-8.3.0.jar&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
@@ -115,12 +150,16 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
+
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
+
+}</component>
+
 }]]></component>
 
   <component name="RecentsManager">
@@ -148,6 +187,7 @@
       </list>
     </recent_temporary>
 
+
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Kent\Documents\GitHub\CC123_Project\appoinment\src\image" />
@@ -173,6 +213,7 @@
       <updated>1712157979436</updated>
       <workItem from="1712157980850" duration="2457000" />
       <workItem from="1714028505213" duration="9857000" />
+      <workItem from="1714047846637" duration="6267000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'main' into master">
       <option name="closed" value="true" />
