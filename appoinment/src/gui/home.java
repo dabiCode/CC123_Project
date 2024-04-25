@@ -206,7 +206,7 @@ public class home extends homepage {
         book.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         book.setForeground(commonconstant.TEXT_COLOR);
         //set mouse listener
-        Appoinment.addMouseListener(new MouseAdapter() {
+        book.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 home.this.dispose();
