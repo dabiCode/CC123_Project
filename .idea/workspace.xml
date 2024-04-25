@@ -5,6 +5,17 @@
   </component>
   <component name="ChangeListManager">
 
+    <list default="true" id="e1b7777b-7ed8-46db-9dff-107d395bfc2f" name="Changes" comment="new">
+      <change afterPath="$PROJECT_DIR$/appoinment/src/gui/typeAppointment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/image/codepics.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/image/codespic2.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/Features.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/home.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/launcher.java" afterDir="false" />
+    </list>
+
+
     <list default="true" id="e1b7777b-7ed8-46db-9dff-107d395bfc2f" name="Changes" comment="axyl">
       <change afterPath="$PROJECT_DIR$/appoinment/src/CCalendar/AppointmentScheduler.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/appoinment/src/admin/calendar.java" afterDir="false" />
@@ -14,6 +25,7 @@
     </list>
 
     <list default="true" id="e1b7777b-7ed8-46db-9dff-107d395bfc2f" name="Changes" comment="Merge branch 'main' into master" />
+
 
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,15 +63,21 @@
     <option name="stateVersion" value="1" />
   </component>
 
+
+
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
+
 
 
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2eb0TIL7ZZHzmf7qb8nmKWvJTIk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -67,6 +85,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
+
+    "Application.launcher.executor": "Run",
+
 
     "Application.AppointmentScheduler.executor": "Run",
     "Application.Calendar.executor": "Run",
@@ -78,6 +99,7 @@
     "Repository.Attach.Sources": "false",
 
     "Application.launcher.executor": "Run",
+
 
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -100,6 +122,11 @@
     ]
   }
 }]]></component>
+
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CC123_Project\appoinment\src\image" />
+
 
   <component name="RunManager">
     <configuration name="AppointmentScheduler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -124,6 +151,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Kent\Documents\GitHub\CC123_Project\appoinment\src\image" />
+
     </key>
   </component>
   <component name="SharedIndexes">
@@ -162,11 +190,16 @@
   </component>
   <component name="VcsManagerConfiguration">
 
+    <MESSAGE value="new" />
+    <option name="LAST_COMMIT_MESSAGE" value="new" />
+
+
     <MESSAGE value="axyl" />
     <option name="LAST_COMMIT_MESSAGE" value="axyl" />
 
     <MESSAGE value="Merge branch 'main' into master" />
     <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'main' into master" />
+
 
   </component>
 </project>

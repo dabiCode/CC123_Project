@@ -19,7 +19,10 @@ new AppointmentScheduler().setVisible(true);
                //new register().setVisible(true);
                 //new Appoinment().setVisible(true);
 //new Features().setVisible(true);
+
+
            // new home().setVisible(true);
+
 
 
 
@@ -27,9 +30,13 @@ new AppointmentScheduler().setVisible(true);
              //   new loginpage().setVisible(true);
 
 
+
+                //new loginpage().setVisible(true);
+
 //new loginpage().setVisible(true);
 
                 new loginpage().setVisible(true);
+
 
 
 //new menu().setVisible(true);
@@ -48,7 +55,12 @@ new AppointmentScheduler().setVisible(true);
 
            new home().setVisible(true);
 
+            //new typeAppointment().setVisible(true);
+               //new register().setVisible(true);
+
+
                new register().setVisible(true);
+
 
 
                 //new Appoinment().setVisible(true);
