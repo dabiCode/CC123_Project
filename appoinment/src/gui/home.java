@@ -13,11 +13,6 @@ public class home extends homepage {
 
     }
 
-
-
-
-
-
     private void addGuiComponents() {
         JLabel menulabel = new JLabel("Health");
 
