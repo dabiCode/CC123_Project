@@ -1,6 +1,8 @@
 package gui;
 
 
+import CCalendar.AppointmentScheduler;
+import admin.calendar;
 import db.MyJDBC;
 
 import db.userDb;
@@ -12,6 +14,18 @@ public class launcher {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
+               // new calendar().setVisible(true);
+new AppointmentScheduler().setVisible(true);
+               //new register().setVisible(true);
+                //new Appoinment().setVisible(true);
+//new Features().setVisible(true);
+
+
+           // new home().setVisible(true);
+
+
+
+
 
 
 
@@ -19,10 +33,24 @@ public class launcher {
 
                // new loginpage().setVisible(true);
 
+             //   new loginpage().setVisible(true);
+
+
+
+                //new loginpage().setVisible(true);
+
+//new loginpage().setVisible(true);
+
+                new loginpage().setVisible(true);
+
+
+
+
 //new menu().setVisible(true);
                //new register().setVisible(true);
-                //new Appoinment().setVisible(true);
+              //  new Appoinment().setVisible(true);
 //new Features().setVisible(true);
+
 
  //  new home().setVisible(true);
 
@@ -31,9 +59,30 @@ public class launcher {
 
               // new register().setVisible(true);
 
+           //new home().setVisible(true);
+
+            //   new register().setVisible(true);
+
+
+   new home().setVisible(true);
+
+              // new register().setVisible(true);
+
+           new home().setVisible(true);
+
+            //new typeAppointment().setVisible(true);
+               //new register().setVisible(true);
+
+
+               new register().setVisible(true);
+
+
+
+
                 //new Appoinment().setVisible(true);
 //new Features().setVisible(true);
             //new home().setVisible(true);
+
 
               // System.out.println(MyJDBC.checkuser("username1234"));
                //System.out.println(MyJDBC.register("username1234", "password"));

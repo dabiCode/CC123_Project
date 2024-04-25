@@ -11,7 +11,7 @@ public class homepage extends JFrame {
         setSize(1250, 800);
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-//
+
         setLayout(null);
 
         setResizable(false);
