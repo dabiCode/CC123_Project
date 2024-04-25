@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1b7777b-7ed8-46db-9dff-107d395bfc2f" name="Changes" comment="" />
+    <list default="true" id="e1b7777b-7ed8-46db-9dff-107d395bfc2f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/appoinment/src/image/Picsart_24-04-24_17-53-27-111.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/image/WIN_20240302_07_45_28_Pro.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/constant/commonconstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/constant/commonconstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/About.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/About.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/homepage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/launcher.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,9 +24,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2eb0TIL7ZZHzmf7qb8nmKWvJTIk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -27,9 +35,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
+    "Application.launcher.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/NT371B5L/OneDrive/Documents/GitHub/CC123_Project/appointment/lib/mysql-connector-j-8.3.0.jar",
     "node.js.detected.package.eslint": "true",
@@ -48,10 +57,16 @@
     ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kent\Documents\GitHub\CC123_Project\appoinment\src\image" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.2-temurin-21.0.2-4caba194b151-7da56cdf" />
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
       </set>
     </attachedChunks>
   </component>
@@ -64,6 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712157979436</updated>
       <workItem from="1712157980850" duration="2457000" />
+      <workItem from="1714028505213" duration="9446000" />
     </task>
     <servers />
   </component>

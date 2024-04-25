@@ -19,15 +19,28 @@ public class About extends homepage{
 
         // Create a JLabel to display the logo image
         JLabel logoLabel = new JLabel(logoIcon);
-        logoLabel.setBounds(490, -30, 1000, 1000); // Adjust the position and size as needed
+        logoLabel.setBounds(490, -100, 1000, 1000); // Adjust the position and size as needed
         add(logoLabel);
 
-        JLabel menulabel = new JLabel("Health Appointment");
+       ImageIcon logoIcon1= new ImageIcon("appoinment/src/image/434024649_1363976920953749_3166889348485858378_n.png"); // Replace "path_to_your_logo_image_file.jpg" with the actual path to your image file
 
-        menulabel.setBounds(50, 70, 400, 100);
-        menulabel.setForeground(commonconstant.TEXT_COLOR.brighter());
+        // Create a JLabel to display the logo image
+       JLabel logoLabel2 = new JLabel(logoIcon1);
+        logoLabel2.setBounds(10, -80, 150, 300); // Adjust the position and size as needed
+        add(logoLabel2);
 
-        menulabel.setFont(new Font("Dialog", Font.BOLD, 20));
+        ImageIcon logoIcon2= new ImageIcon("appoinment/src/image/Picsart_24-04-24_17-53-27-111.png"); // Replace "path_to_your_logo_image_file.jpg" with the actual path to your image file
+
+        // Create a JLabel to display the logo image
+        JLabel logoLabel3 = new JLabel(logoIcon2);
+        logoLabel3.setBounds(-1150, -350, 2500, 1500); // Adjust the position and size as needed
+        add(logoLabel3);
+
+        JLabel menulabel = new JLabel("Medical Appointment");
+
+        menulabel.setBounds(90, 37, 400, 100);
+        menulabel.setForeground(commonconstant.DARK_BLUE.brighter());
+        menulabel.setFont(new Font("Dialog", Font.BOLD, 23));
 
         menulabel.setHorizontalAlignment(SwingConstants.CENTER);
 
@@ -38,8 +51,6 @@ public class About extends homepage{
 
         JButton home = new JButton("Home");
         home.setFont(new Font("Dialog", Font.BOLD, 18));
-
-
         home.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         home.setForeground(commonconstant.TEXT_COLOR);
 
@@ -96,18 +107,64 @@ public class About extends homepage{
         text1.setHorizontalAlignment(SwingConstants.CENTER);
         add(text1);
 
-        JLabel comment3 = new JLabel("At [Medical Appointment Booking Service], our mission is to empower individuals to take control");
-        comment3.setBounds(130, 320, 600, 150);
+        JLabel comment3 = new JLabel("At MEDCARE Medical Appointment, our mission is to empower individuals to take control");
+        comment3.setBounds(110, 320, 600, 150);
         comment3.setForeground(commonconstant.TEXT_COLOR.brighter());
         comment3.setFont(new Font("Dialog", Font.BOLD, 12));
         comment3.setHorizontalAlignment(SwingConstants.CENTER);
         add(comment3);
 
         JLabel comment4 = new JLabel("of their health by simplifying the appointment booking process. We aim to bridge the gap ");
-        comment4.setBounds(130, 340, 600, 150);
+        comment4.setBounds(110, 340, 600, 150);
         comment4.setForeground(commonconstant.TEXT_COLOR.brighter());
         comment4.setFont(new Font("Dialog", Font.BOLD, 12));
         comment4.setHorizontalAlignment(SwingConstants.CENTER);
         add(comment4);
+
+        JLabel text2 = new JLabel("Our Team");
+        text2.setBounds(80, 410, 400, 100);
+        text2.setForeground(commonconstant.TEXT_COLOR.brighter());
+        text2.setFont(new Font("Dialog", Font.BOLD, 40));
+        text2.setHorizontalAlignment(SwingConstants.CENTER);
+        add(text2);
+
+        JLabel comment5 = new JLabel("Behind MEDCARE Medical Appointment is a dedicated team of healthcare professionals,");
+        comment5.setBounds(109, 420, 600, 150);
+        comment5.setForeground(commonconstant.TEXT_COLOR.brighter());
+        comment5.setFont(new Font("Dialog", Font.BOLD, 12));
+        comment5.setHorizontalAlignment(SwingConstants.CENTER);
+        add(comment5);
+
+        JLabel comment6 = new JLabel("technologists, and customer service experts. We are passionate about leveraging technology to   ");
+        comment6.setBounds(137, 440, 600, 150);
+        comment6.setForeground(commonconstant.TEXT_COLOR.brighter());
+        comment6.setFont(new Font("Dialog", Font.BOLD, 12));
+        comment6.setHorizontalAlignment(SwingConstants.CENTER);
+        add(comment6);
+
+
+        JLabel comment7 = new JLabel("enhance the patient experience and improve healthcare outcomes.  ");
+        comment7.setBounds(52, 460, 600, 150);
+        comment7.setForeground(commonconstant.TEXT_COLOR.brighter());
+        comment7.setFont(new Font("Dialog", Font.BOLD, 12));
+        comment7.setHorizontalAlignment(SwingConstants.CENTER);
+        add(comment7);
+
+        JPanel panel1 = new JPanel();
+        panel1.setLayout(new BorderLayout());
+
+        JLabel panelLabel = new JLabel();
+        panel1.add(panelLabel, BorderLayout.CENTER);
+        panel1.setBackground(commonconstant.HOME_BG1_GRAY);
+        // Set the size and location of the panel
+        panel1.setBounds(0, 180, 1300, 440);
+        // Add the panel to the main container
+        add(panel1);
+
+      /*  ImageIcon image = new ImageIcon("appoinment/src/image/WIN_20240302_07_45_28_Pro.jpg");
+        JLabel image2 = new JLabel(image);
+        image2.setBounds(400, 0, 450, 700); // Adjust the position and size as needed
+        add(image2);
+*/
     }
 }
