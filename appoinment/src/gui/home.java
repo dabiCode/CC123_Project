@@ -69,22 +69,22 @@ public class home extends homepage {
 
         //reserved space for database
 
-        JLabel features= new JLabel("Features");
-        features.setFont(new Font("Dialog", Font.BOLD, 18));
+        JLabel Bapp= new JLabel("Book an Appointment");
+        Bapp.setFont(new Font("Dialog", Font.BOLD, 18));
 
-        features.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        features.setForeground(commonconstant.TEXT_COLOR);
+        Bapp.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        Bapp.setForeground(commonconstant.TEXT_COLOR);
         //set mouse listener
-        features.addMouseListener(new MouseAdapter() {
+        Bapp.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 home.this.dispose();
 
-                new Features().setVisible(true);
+                new Appoinment().setVisible(true);
             }
         });
 
-        features.setBounds(730, 91, 150,25);
+        Bapp.setBounds(695, 91, 200,25);
 
         JLabel about= new JLabel("About Us");
         about.setFont(new Font("Dialog", Font.BOLD, 18));
@@ -101,7 +101,7 @@ public class home extends homepage {
             }
         });
 
-        about.setBounds(855, 91, 160,25);
+        about.setBounds(900, 91, 160,25);
 
         JButton signin= new JButton("Logout");
         signin.setFont(new Font("Dialog", Font.BOLD, 18));
@@ -122,7 +122,7 @@ public class home extends homepage {
 
         add(signin);
         add(about);
-        add(features);
+        add(Bapp);
         add(home);
 
 
@@ -198,22 +198,32 @@ public class home extends homepage {
         add(label);
         add(text);
 
-        JLabel Appoinment = new JLabel("Appointment");
-        Appoinment.setBounds(600, 20, 400, 400);
-        Appoinment.setForeground(commonconstant.TEXT_COLOR);
+        JPanel appointmentPanel = new JPanel();
+        appointmentPanel.setLayout(null); // Set the layout to null to allow positioning components manually
+        appointmentPanel.setBounds(670, 165, 520, 170); // Set the bounds of the panel
+        appointmentPanel.setBackground(commonconstant.PRIMARY_COLOR); // Set the background color of the panel
 
-        Appoinment.setFont(new Font("Dialog", Font.BOLD, 30));
-        Appoinment.setHorizontalAlignment(SwingConstants.CENTER);
+        JLabel Appoinment = new JLabel("APPOINTMENT");
+        Appoinment.setBounds(10, 10, 500, 50); // Adjust the bounds and position of the label
+        Appoinment.setForeground(commonconstant.SECONDARY_COLOR);
+        Appoinment.setFont(new Font("Dialog", Font.BOLD, 38));
 
+        JLabel AppoinmentBook = new JLabel("Want an appointment?");
+        AppoinmentBook.setBounds(15, 50, 500, 50); // Adjust the bounds and position of the label
+        AppoinmentBook.setForeground(commonconstant.SECONDARY_COLOR);
+        AppoinmentBook.setFont(new Font("Dialog", Font.BOLD, 20));
 
+        ImageIcon AppointmentHomeImg= new ImageIcon("appoinment/src/image/codespic2.jpeg");
 
-
-        add(Appoinment);
+        // Create a JLabel to display the logo image
+        JLabel HomeImgAppointmentlabel = new JLabel (AppointmentHomeImg);
+        HomeImgAppointmentlabel.setBounds(970, 175, 200, 150); // Adjust the position and size as needed
 
         JButton book = new JButton("Book Now");
-        book.setFont(new Font("Dialog", Font.BOLD, 10));
+        book.setFont(new Font("Dialog", Font.BOLD, 15));
 
         book.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        book.setBounds(710, 280, 150, 30);
         book.setForeground(commonconstant.TEXT_COLOR);
         //set mouse listener
         book.addMouseListener(new MouseAdapter() {
@@ -225,9 +235,14 @@ public class home extends homepage {
             }
         });
 
-        book.setBounds(450, 600, 100,20);
-
+        add(HomeImgAppointmentlabel);
+        appointmentPanel.add(AppoinmentBook);
+        appointmentPanel.add(Appoinment); // Add the label to the panel
         add(book);
+
+
+
+        add(appointmentPanel); // Add the panel to the main container
 
 
         JLabel hours = new JLabel("Opening Hours");
@@ -298,25 +313,19 @@ public class home extends homepage {
         // Add the panel to the main container
         add(panel2);
 
-        JPanel panel3 = new JPanel();
-        panel3.setLayout(new BorderLayout());
+        setLayout(null); // Set the layout of the parent container to null
 
+        JPanel panel3 = new JPanel(new BorderLayout());
         JLabel panelLabel3 = new JLabel();
-        panel3.add(panelLabel, BorderLayout.CENTER);
+        panel3.add(panelLabel3, BorderLayout.CENTER);
         panel3.setBackground(commonconstant.HOME_BG1_BLUE);
-        // Set the size and location of the panel
         panel3.setBounds(600, 150, 650, 650);
-
-        // Add the panel to the main container
         add(panel3);
 
 
 
+
     }
-
-
-
-
 }
 
 
