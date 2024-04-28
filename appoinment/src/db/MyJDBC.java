@@ -3,6 +3,8 @@ package db;
 import constant.commonconstant;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MyJDBC {
     public static boolean register(String username, String password){
@@ -56,5 +58,25 @@ public class MyJDBC {
             e.printStackTrace();
         }
         return true;
+    }
+    public static List<MyJDBC> getLoggedInUsers() {
+        List<MyJDBC> loggedInUsers = new ArrayList<>();
+
+        try {
+            Connection connection = DriverManager.getConnection(commonconstant.DB_URL, commonconstant.DB_USERNAME, commonconstant.DB_PASSWORD);
+            PreparedStatement statement = connection.prepareStatement("SELECT User_name, user_password FROM " + commonconstant.DB_TABLE_NAME + " WHERE is_logged_in = 1");
+            ResultSet resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                MyJDBC user = new MyJDBC();
+                resultSet.getString("User_name");
+                resultSet.getString("user_password");
+                loggedInUsers.add(user);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return loggedInUsers;
     }
 }
