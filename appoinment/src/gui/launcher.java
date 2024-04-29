@@ -1,11 +1,7 @@
 package gui;
 
 
-import CCalendar.AppointmentScheduler;
-import admin.calendar;
-import db.MyJDBC;
-
-import db.userDb;
+import adminpage.calendar;
 
 import javax.swing.*;
 
@@ -14,7 +10,7 @@ public class launcher {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-               // new calendar().setVisible(true);
+                new calendar().setVisible(true);
 //new AppointmentScheduler().setVisible(true);
                //new register().setVisible(true);
                 //new Appoinment().setVisible(true);
@@ -41,7 +37,7 @@ public class launcher {
 
 //new loginpage().setVisible(true);
 
-                new loginpage().setVisible(true);
+              //  new loginpage().setVisible(true);
 
 
 

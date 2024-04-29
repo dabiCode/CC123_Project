@@ -1,4 +1,4 @@
-package CCalendar;
+package adminpage;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -89,7 +89,7 @@ public class AppointmentScheduler extends JFrame {
         calendarPanel.removeAll();
 
         SimpleDateFormat sdf = new SimpleDateFormat("MMMM yyyy");
-        Label monthYearLabel = null;
+        Label monthYearLabel = new Label();
         monthYearLabel.setText(sdf.format(currentCalendar.getTime()));
 
         // Add labels for days of the week
