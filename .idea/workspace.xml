@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eae16978-4cb5-4fab-8cf1-554724d410a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/appoinment/src/adminpage/AdminPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CC123_Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CC123_Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appoinment/src/db/MyJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/db/MyJDBC.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/Appoinment.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/Appoinment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/home.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/home.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/launcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +59,20 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.launcher.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -77,10 +80,17 @@
       <recent name="C:\Users\Kent\Documents\GitHub\CC123_Project\appoinment\src\image" />
     </key>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-temurin-21.0.2-4caba194b151-7da56cdf" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e1b7777b-7ed8-46db-9dff-107d395bfc2f" name="Changes" comment="" />
+      <changelist id="eae16978-4cb5-4fab-8cf1-554724d410a2" name="Changes" comment="" />
       <created>1712157979436</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -88,6 +98,7 @@
       <workItem from="1712157980850" duration="2457000" />
       <workItem from="1714028505213" duration="9857000" />
       <workItem from="1714047846637" duration="6267000" />
+      <workItem from="1714371548274" duration="540000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'main' into master">
       <option name="closed" value="true" />
