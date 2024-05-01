@@ -1,5 +1,6 @@
 package gui;
 import constant.commonconstant;
+import db.MyJDBC;
 /*import sa curve sa panel
  */
 import javax.swing.BorderFactory;
@@ -8,6 +9,8 @@ import javax.swing.border.BevelBorder;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
@@ -104,14 +107,15 @@ public class home extends homepage {
         signin.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         signin.setForeground(commonconstant.SECONDARY_COLOR);
         signin.setBackground(commonconstant.HOME_BG1_BLUE);
-        signin.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                home.this.dispose();
+     signin.addMouseListener(new MouseAdapter() {
+         @Override
+         public void mouseClicked(MouseEvent e) {
+             super.mouseClicked(e);
+             home.this.dispose();
+             new loginpage().setVisible(true);
+         }
+     });
 
-                new loginpage().setVisible(true);
-            }
-        });
         signin.setBounds(1000, 81, 150,42);
 
 

@@ -1,8 +1,12 @@
 package db;
 
+import adminpage.User;
+import adminpage.schedules;
 import constant.commonconstant;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class userDb {
     public static boolean book(int id,String last_name, String first_name, String midlle_name, String time){
@@ -63,5 +67,31 @@ public class userDb {
         }
         return true;
 
+    }
+
+    public static List<schedules> getAppointment() {
+        List<schedules> Appointment = new ArrayList<>();
+        try {
+            Connection connection = DriverManager.getConnection(commonconstant.DB_USER, commonconstant.DB_USERNAME, commonconstant.DB_PASSWORD);
+
+            PreparedStatement statement = connection.prepareStatement(
+                    "SELECT user_id, last_name, first_name, m_i, time FROM " + commonconstant.DB_USER_INFO
+            );
+            ResultSet resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+                int user_id = resultSet.getInt("user_id");
+                String last_name = resultSet.getString("last_name");
+                String first_name = resultSet.getString("first_name");
+                String middle_name = resultSet.getString("m_i");
+                String time = resultSet.getString("time");
+
+                schedules appointment = new schedules(user_id, last_name, first_name, middle_name, time);
+                Appointment.add(appointment);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return Appointment;
     }
 }

@@ -91,6 +91,10 @@ public class register extends form{
         regiserButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         regiserButton.setBackground(commonconstant.BUTTON_COLOR);
         regiserButton.setBounds(300, 520, 250,50);
+
+
+
+
         regiserButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -99,8 +103,10 @@ public class register extends form{
                 String passsword = new String(passwordField.getPassword());
                 String rePassword = new String(repasswordField.getPassword());
 
+                Boolean logg = true;
                 if(validateuserinput(username, passsword, rePassword)){
-                  if(MyJDBC.register(username, passsword)){
+
+                    if(MyJDBC.register(username, passsword, logg)){
                      register.this.dispose();
 
                      loginpage login = new loginpage();

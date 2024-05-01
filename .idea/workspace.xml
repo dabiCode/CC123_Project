@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eae16978-4cb5-4fab-8cf1-554724d410a2" name="Changes" comment="Merge branch 'main' into master">
+      <change afterPath="$PROJECT_DIR$/appoinment/src/adminpage/ScheduleTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/adminpage/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/adminpage/adminform.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/adminpage/schedules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/adminpage/AdminPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/adminpage/AdminPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/db/MyJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/db/MyJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/db/userDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/db/userDb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/home.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/home.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appoinment/src/gui/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/register.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/register.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,14 +70,19 @@
   "keyToString": {
     "Application.launcher.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/NT371B5L/OneDrive/Documents/GitHub/CC123_Project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -81,13 +96,6 @@
       <recent name="C:\Users\Kent\Documents\GitHub\CC123_Project\appoinment\src\image" />
     </key>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.2-temurin-21.0.2-4caba194b151-7da56cdf" />
-      </set>
-    </attachedChunks>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -99,7 +107,7 @@
       <workItem from="1712157980850" duration="2457000" />
       <workItem from="1714028505213" duration="9857000" />
       <workItem from="1714047846637" duration="6267000" />
-      <workItem from="1714371548274" duration="922000" />
+      <workItem from="1714371548274" duration="1389000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'main' into master">
       <option name="closed" value="true" />
@@ -117,11 +125,30 @@
       <option name="project" value="LOCAL" />
       <updated>1714372181885</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Merge branch 'main' into master">
+      <option name="closed" value="true" />
+      <created>1714372704234</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714372704234</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new" />
