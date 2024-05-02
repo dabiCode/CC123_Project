@@ -108,46 +108,44 @@ public class Appoinment extends homepage {
         Booknow.setBackground(commonconstant.BUTTON_COLOR);
         Booknow.setBounds(300, 520, 250,50);
         Booknow.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e) {
-            //database validation for users
-            int Id = Integer.parseInt(IdField.getText());
-            String LastName = lastNamefield.getText();
-            String firstname = firstnamefield.getText();
-            String MI = Mifield.getText();
-            String time = timefield.getText();
+            public void actionPerformed(ActionEvent e) {
+                //database validation for users
+                int Id = Integer.parseInt(IdField.getText());
+                String LastName = lastNamefield.getText();
+                String firstname = firstnamefield.getText();
+                String MI = Mifield.getText();
+                String time = timefield.getText();
 
 
-            if(validateuserinput(Id, LastName, firstname, MI, time)){
-                if(userDb.book(Id,LastName, firstname, MI, time)){
-                    Appoinment.this.dispose();
+                if(validateuserinput(Id, LastName, firstname, MI, time)){
+                    if(userDb.book(Id,LastName, firstname, MI, time)){
+                        Appoinment.this.dispose();
 
-                    home home = new home();
-                    home.setVisible(true);
+                        home home = new home();
+                        home.setVisible(true);
 
-                    JOptionPane.showMessageDialog(home, "Booked account successfully");
+                        JOptionPane.showMessageDialog(home, "Booked account successfully");
 
-                }else {
-                    JOptionPane.showMessageDialog(Appoinment.this, "Error: Name already taken");
+                    }else {
+                        JOptionPane.showMessageDialog(Appoinment.this, "Error: Name already taken");
+                    }
+                }else{
+                    JOptionPane.showMessageDialog(Appoinment.this, "Error. Name and id must contain words and/or value\n");
                 }
-            }else{
-                JOptionPane.showMessageDialog(Appoinment.this, "Error. Name and id must contain words and/or value\n");
             }
-        }
-    });
+        });
 
         add(Booknow);
 
-        }
+    }
     private boolean validateuserinput( int id, String lastName, String firstname, String middle_name, String time ) {
         //database
         if (id == 0 || lastName.length() == 0 || firstname.length() == 0 || middle_name.length() == 0 || time.length() == 0)
             return false;
 
-        if (id == 0) return false;
+        if (id < 6) return false;
 
 
         return true;
-        }
     }
-
-
+}

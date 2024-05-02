@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="eae16978-4cb5-4fab-8cf1-554724d410a2" name="Changes" comment="edited log in and registered">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/adminpage/AdminPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/adminpage/AppointmentScheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/adminpage/MainPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/adminpage/ScheduleTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/adminpage/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/adminpage/adminform.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/adminpage/calendar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/adminpage/schedules.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/gui/typeAppointment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/image/20240424_162915_0000.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/image/Picsart_24-04-24_17-53-27-111.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/image/WIN_20240302_07_45_28_Pro.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/image/codepics.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/image/codespic2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CC123_Project/image/20240424_162915_0000.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CC123_Project/image/Picsart_24-04-24_17-53-27-111.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CC123_Project/image/WIN_20240302_07_45_28_Pro.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CC123_Project/image/codepics.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/CC123_Project/image/codespic2.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CC123_Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CC123_Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/constant/commonconstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/constant/commonconstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/db/MyJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/db/MyJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/db/userDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/db/userDb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/About.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/About.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/Appoinment.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/Appoinment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/Features.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/home.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/home.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/homepage.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/homepage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/loginpage.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/loginpage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/register.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/register.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="John Brylle Crodua &lt;146831274+brylle60@users.noreply.github.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Axzyln&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/brylle60/CC123_Project.git&quot;,
+    &quot;accountId&quot;: &quot;3bf7854e-9b19-41d9-92fc-e9b0b860a7e7&quot;
+  }
+}</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2eb0TIL7ZZHzmf7qb8nmKWvJTIk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.launcher.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Merging main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/NT371B5L/OneDrive/Documents/GitHub/CC123_Project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kent\Documents\GitHub\CC123_Project\appoinment\src\image" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eae16978-4cb5-4fab-8cf1-554724d410a2" name="Changes" comment="" />
+      <created>1712157979436</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712157979436</updated>
+      <workItem from="1712157980850" duration="2457000" />
+      <workItem from="1714028505213" duration="9857000" />
+      <workItem from="1714047846637" duration="6267000" />
+      <workItem from="1714371548274" duration="1389000" />
+    </task>
+    <task id="LOCAL-00001" summary="Merge branch 'main' into master">
+      <option name="closed" value="true" />
+      <created>1714039530270</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714039530270</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Merge branch 'main' into master">
+      <option name="closed" value="true" />
+      <created>1714372181885</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714372181885</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Merge branch 'main' into master">
+      <option name="closed" value="true" />
+      <created>1714372704234</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714372704234</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="new" />
+    <MESSAGE value="axyl" />
+    <MESSAGE value="Merge branch 'main' into master" />
+    <MESSAGE value="edited log in and registered" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited log in and registered" />
+  </component>
+</project>

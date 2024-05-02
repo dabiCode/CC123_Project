@@ -1,10 +1,20 @@
 package gui;
 import constant.commonconstant;
+import db.MyJDBC;
+/*import sa curve sa panel
+ */
+import javax.swing.BorderFactory;
+import javax.swing.JFrame;
+import javax.swing.border.BevelBorder;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
+
 
 public class home extends homepage {
     public home(){
@@ -13,15 +23,17 @@ public class home extends homepage {
 
     }
 
-
-
-
-
-
     private void addGuiComponents() {
+        ImageIcon logoIcon = new ImageIcon("appoinment/src/image/434024649_1363976920953749_3166889348485858378_n.png"); // Replace "path_to_your_logo_image_file.jpg" with the actual path to your image file
+
+        // Create a JLabel to display the logo image
+        JLabel logoLabel = new JLabel(logoIcon);
+        logoLabel.setBounds(-10, 45, 180, 100); // Adjust the position and size as needed
+        add(logoLabel);
+
         JLabel menulabel = new JLabel("Health");
 
-        menulabel.setBounds(0, 20, 400, 100);
+        menulabel.setBounds(0, 53, 400, 100);
         menulabel.setForeground(commonconstant.HOME_BG1_BLUE);
 
         menulabel.setFont(new Font("Dialog", Font.BOLD, 20));
@@ -32,7 +44,7 @@ public class home extends homepage {
 
         JLabel menulabel2 = new JLabel("Appointment");
 
-        menulabel2.setBounds(91, 20, 400, 100);
+        menulabel2.setBounds(91, 53, 400, 100);
         menulabel2.setForeground(commonconstant.TEXT_COLOR);
 
         menulabel2.setFont(new Font("Dialog", Font.BOLD, 20));
@@ -44,33 +56,35 @@ public class home extends homepage {
 
         //new time menu for the time selection mode
 
-        JButton home = new JButton("Home");
+        JLabel home = new JLabel("Home");
         home.setFont(new Font("Dialog", Font.BOLD, 18));
 
 
         home.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         home.setForeground(commonconstant.TEXT_COLOR);
-        home.setBounds(610, 150, 100,25);
+        home.setBounds(630, 91, 100,25);
+
+
         //reserved space for database
 
-        JButton features= new JButton("Features");
-        features.setFont(new Font("Dialog", Font.BOLD, 18));
+        JLabel Bapp= new JLabel("Book an Appointment");
+        Bapp.setFont(new Font("Dialog", Font.BOLD, 18));
 
-        features.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        features.setForeground(commonconstant.TEXT_COLOR);
+        Bapp.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        Bapp.setForeground(commonconstant.TEXT_COLOR);
         //set mouse listener
-        features.addMouseListener(new MouseAdapter() {
+        Bapp.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 home.this.dispose();
 
-                new Features().setVisible(true);
+                new Appoinment().setVisible(true);
             }
         });
 
-        features.setBounds(700, 150, 150,25);
+        Bapp.setBounds(695, 91, 200,25);
 
-        JButton about= new JButton("About Us");
+        JLabel about= new JLabel("About Us");
         about.setFont(new Font("Dialog", Font.BOLD, 18));
 
         about.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
@@ -85,28 +99,29 @@ public class home extends homepage {
             }
         });
 
-        about.setBounds(850, 150, 160,25);
+        about.setBounds(900, 91, 160,25);
 
         JButton signin= new JButton("Logout");
         signin.setFont(new Font("Dialog", Font.BOLD, 18));
 
         signin.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        signin.setForeground(commonconstant.TEXT_COLOR);
-        signin.setBackground(commonconstant.BUTTON_COLOR);
-        signin.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                home.this.dispose();
+        signin.setForeground(commonconstant.SECONDARY_COLOR);
+        signin.setBackground(commonconstant.HOME_BG1_BLUE);
+     signin.addMouseListener(new MouseAdapter() {
+         @Override
+         public void mouseClicked(MouseEvent e) {
+             super.mouseClicked(e);
+             home.this.dispose();
+             new loginpage().setVisible(true);
+         }
+     });
 
-                new loginpage().setVisible(true);
-            }
-        });
-        signin.setBounds(1000, 150, 150,25);
+        signin.setBounds(1000, 81, 150,42);
 
 
         add(signin);
         add(about);
-        add(features);
+        add(Bapp);
         add(home);
 
 
@@ -118,8 +133,8 @@ public class home extends homepage {
         text.setFont(new Font("Dialog", Font.BOLD, 60));
         text.setHorizontalAlignment(SwingConstants.CENTER);
 
-        JLabel label = new JLabel("with our doctor");
-        label.setBounds(5, 100, 600, 500);
+        JLabel label = new JLabel("with our doctor       ");
+        label.setBounds(16, 100, 600, 500);
         label.setForeground(commonconstant.TEXT_COLOR.brighter());
 
         label.setFont(new Font("Dialog", Font.BOLD, 60));
@@ -139,36 +154,31 @@ public class home extends homepage {
         newlabel2.setFont(new Font("Dialog", Font.ROMAN_BASELINE, 15));
         newlabel2.setHorizontalAlignment(SwingConstants.CENTER);
 
-        JLabel newlabel3 = new JLabel("chat with them whenever and wherever makes it easier to catch and handle health");
-        newlabel3.setBounds(16, 215, 600, 600);
+        JLabel newlabel3 = new JLabel("chat with them whenever and wherever makes it easier to catch and handle health ");
+        newlabel3.setBounds(16, 220, 600, 600);
         newlabel3.setForeground(commonconstant.TEXT_COLOR.brighter());
 
         newlabel3.setFont(new Font("Dialog", Font.ROMAN_BASELINE, 15));
         newlabel3.setHorizontalAlignment(SwingConstants.CENTER);
 
-        JLabel newlabel4 = new JLabel("problems early. This helps you stay in control of your health and feel good. Book");
-        newlabel4.setBounds(16, 230, 600, 600);
-        newlabel4.setForeground(commonconstant.TEXT_COLOR.brighter());
 
-        newlabel4.setFont(new Font("Dialog", Font.ROMAN_BASELINE, 15));
-        newlabel4.setHorizontalAlignment(SwingConstants.CENTER);
 
-        JLabel newlabel5 = new JLabel("your appointment now. With Medicare, your health is our priority. Accessible        ");
-        newlabel5.setBounds(16, 245, 600, 600);
+        JLabel newlabel5 = new JLabel("Book your appointment now. With Medcare, your health is our priority. Accessible ");
+        newlabel5.setBounds(16, 240, 600, 600);
         newlabel5.setForeground(commonconstant.TEXT_COLOR.brighter());
 
         newlabel5.setFont(new Font("Dialog", Font.ROMAN_BASELINE, 15));
         newlabel5.setHorizontalAlignment(SwingConstants.CENTER);
 
-        JLabel newlabel6 = new JLabel("consultations mean we're here whenever you need us, wherever you are. It's        ");
+        JLabel newlabel6 = new JLabel("consultations mean we're here whenever you need us, wherever you are. It's         ");
         newlabel6.setBounds(16, 260, 600, 600);
         newlabel6.setForeground(commonconstant.TEXT_COLOR.brighter());
 
         newlabel6.setFont(new Font("Dialog", Font.ROMAN_BASELINE, 15));
         newlabel6.setHorizontalAlignment(SwingConstants.CENTER);
 
-        JLabel newlabel7 = new JLabel("about proactive care, catching issues early, and keeping you feeling your best.     ");
-        newlabel7.setBounds(16, 275, 600, 600);
+        JLabel newlabel7 = new JLabel("about proactive care, catching issues early, and keeping you feeling your best.      ");
+        newlabel7.setBounds(16, 280, 600, 600);
         newlabel7.setForeground(commonconstant.TEXT_COLOR.brighter());
 
         newlabel7.setFont(new Font("Dialog", Font.ROMAN_BASELINE, 15));
@@ -181,32 +191,41 @@ public class home extends homepage {
         add(newlabel7);
         add(newlabel6);
         add(newlabel5);
-        add(newlabel4);
         add(newlabel3);
         add(newlabel2);
         add(newlabel);
         add(label);
         add(text);
 
-        JLabel Appoinment = new JLabel("Appointment");
-        Appoinment.setBounds(600, 20, 400, 400);
-        Appoinment.setForeground(commonconstant.TEXT_COLOR);
+        JPanel appointmentPanel = new JPanel();
+        appointmentPanel.setLayout(null); // Set the layout to null to allow positioning components manually
+        appointmentPanel.setBounds(670, 165, 520, 170); // Set the bounds of the panel
+        appointmentPanel.setBackground(commonconstant.PRIMARY_COLOR); // Set the background color of the panel
 
-        Appoinment.setFont(new Font("Dialog", Font.BOLD, 30));
-        Appoinment.setHorizontalAlignment(SwingConstants.CENTER);
+        JLabel Appoinment = new JLabel("APPOINTMENT");
+        Appoinment.setBounds(10, 10, 500, 50); // Adjust the bounds and position of the label
+        Appoinment.setForeground(commonconstant.SECONDARY_COLOR);
+        Appoinment.setFont(new Font("Dialog", Font.BOLD, 38));
 
+        JLabel AppoinmentBook = new JLabel("Want an appointment?");
+        AppoinmentBook.setBounds(15, 50, 500, 50); // Adjust the bounds and position of the label
+        AppoinmentBook.setForeground(commonconstant.SECONDARY_COLOR);
+        AppoinmentBook.setFont(new Font("Dialog", Font.BOLD, 20));
 
+        ImageIcon AppointmentHomeImg= new ImageIcon("appoinment/src/image/codespic2.jpeg");
 
-
-        add(Appoinment);
+        // Create a JLabel to display the logo image
+        JLabel HomeImgAppointmentlabel = new JLabel (AppointmentHomeImg);
+        HomeImgAppointmentlabel.setBounds(970, 175, 200, 150); // Adjust the position and size as needed
 
         JButton book = new JButton("Book Now");
-        book.setFont(new Font("Dialog", Font.BOLD, 10));
+        book.setFont(new Font("Dialog", Font.BOLD, 15));
 
         book.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        book.setBounds(710, 280, 150, 30);
         book.setForeground(commonconstant.TEXT_COLOR);
         //set mouse listener
-        Appoinment.addMouseListener(new MouseAdapter() {
+        book.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 home.this.dispose();
@@ -215,9 +234,14 @@ public class home extends homepage {
             }
         });
 
-        book.setBounds(450, 600, 100,20);
-
+        add(HomeImgAppointmentlabel);
+        appointmentPanel.add(AppoinmentBook);
+        appointmentPanel.add(Appoinment); // Add the label to the panel
         add(book);
+
+
+
+        add(appointmentPanel); // Add the panel to the main container
 
 
         JLabel hours = new JLabel("Opening Hours");
@@ -271,7 +295,7 @@ public class home extends homepage {
         panel1.add(panelLabel, BorderLayout.CENTER);
 
         // Set the size and location of the panel
-        panel1.setBounds(0, 0, 1300, 200);
+        panel1.setBounds(0, 0, 1300, 150);
 
         // Add the panel to the main container
         add(panel1);
@@ -283,47 +307,22 @@ public class home extends homepage {
         panel2.add(panelLabel, BorderLayout.CENTER);
         panel2.setBackground(commonconstant.HOME_BG1_GRAY);
         // Set the size and location of the panel
-        panel2.setBounds(0, 200, 630, 600);
+        panel2.setBounds(0, 150, 630, 650);
 
         // Add the panel to the main container
         add(panel2);
 
-        JPanel panel3 = new JPanel();
-        panel2.setLayout(new BorderLayout());
+        setLayout(null); // Set the layout of the parent container to null
 
+        JPanel panel3 = new JPanel(new BorderLayout());
         JLabel panelLabel3 = new JLabel();
-        panel3.add(panelLabel, BorderLayout.CENTER);
+        panel3.add(panelLabel3, BorderLayout.CENTER);
         panel3.setBackground(commonconstant.HOME_BG1_BLUE);
-        // Set the size and location of the panel
-        panel3.setBounds(600, 200, 650, 600);
-
-        // Add the panel to the main container
+        panel3.setBounds(600, 150, 650, 650);
         add(panel3);
+
+
+
+
     }
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

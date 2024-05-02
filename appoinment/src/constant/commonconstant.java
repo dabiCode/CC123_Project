@@ -25,6 +25,9 @@ public class commonconstant {
     public static final Color HOME_BG1_BLUE = Color.decode("#017ac2");
 
     public static final Color HOME_BG1_GRAYISH = Color.decode("#aec6cf");
+//DARKBLUE
+        public static final Color DARK_BLUE = Color.decode("#044cbf");
+
 
     //teal
     public static final Color TEAL_REGISTER = Color.decode("#2aa2a2");
