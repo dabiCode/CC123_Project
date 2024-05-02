@@ -15,7 +15,6 @@ public class MyJDBC {
                 PreparedStatement insertUser = connection.prepareStatement("INSERT INTO "+ commonconstant.DB_TABLE_NAME+"(User_name, user_password, logged_in_users)"+ "VALUES(?, ?, ?)");
                 insertUser.setString(1, username);
                 insertUser.setString(2, password);
-                insertUser.setBoolean(3, logged);
                 insertUser.executeUpdate();
                 return true;
             }

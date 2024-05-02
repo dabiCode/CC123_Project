@@ -9,7 +9,7 @@ public class launcher {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-               new register().setVisible(true);
+               new loginpage().setVisible(true);
                 //new Appoinment().setVisible(true);
 //new Features().setVisible(true);
             //new home().setVisible(true);
