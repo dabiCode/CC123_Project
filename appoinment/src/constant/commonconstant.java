@@ -1,6 +1,8 @@
 package constant;
 
+import javax.swing.*;
 import java.awt.*;
+
 
 public class commonconstant {
     //color usage for the gui window
@@ -27,6 +29,12 @@ public class commonconstant {
         public static final Color DARK_BLUE = Color.decode("#044cbf");
 
 
+    //teal
+    public static final Color TEAL_REGISTER = Color.decode("#2aa2a2");
+    //DARK TEAL
+    public static final Color DARKTEAL_REGISTER = Color.decode("#004d4d");
+    //DARKERBLUE
+    public static final Color DARKERBLUE_REG = Color.decode("#00004d");
 
 
 
@@ -38,5 +46,16 @@ public class commonconstant {
     public static final String DB_TABLE_NAME = "user_info";
 
     public static final String DB_USER_INFO = "user_data";
+
+
+    public static void displayImage(JPanel panel, String imagePath) {
+        ImageIcon imageIcon = new ImageIcon(imagePath);
+        Image image = imageIcon.getImage();
+        Image scaledImage = image.getScaledInstance(panel.getWidth(), panel.getHeight(), Image.SCALE_SMOOTH);
+
+        Graphics g = panel.getGraphics();
+        g.drawImage(scaledImage, 0, 0, null);
+        g.dispose();
+    }
 
 }

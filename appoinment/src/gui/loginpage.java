@@ -116,8 +116,5 @@ public class loginpage extends form {
         });
         registerLabel.setBounds(300, 520, 250, 30);
         add(registerLabel);
-
-
-
     }
 }
