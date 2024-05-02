@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e1b7777b-7ed8-46db-9dff-107d395bfc2f" name="Changes" comment="Merge branch 'main' into master">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appoinment/src/db/MyJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/db/MyJDBC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appoinment/src/gui/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/launcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/loginpage.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/loginpage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/register.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/register.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

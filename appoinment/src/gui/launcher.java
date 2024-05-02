@@ -9,10 +9,10 @@ public class launcher {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-               //new register().setVisible(true);
+               new loginpage().setVisible(true);
                 //new Appoinment().setVisible(true);
 //new Features().setVisible(true);
-            new home().setVisible(true);
+            //new home().setVisible(true);
               // System.out.println(MyJDBC.checkuser("username1234"));
                //System.out.println(MyJDBC.register("username1234", "password"));
                // System.out.println(MyJDBC.validatelogin("username1234", "password"));
