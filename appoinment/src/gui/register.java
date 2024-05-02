@@ -10,6 +10,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import static java.awt.BorderLayout.*;
+
 public class register extends form{
     public register(){
        super("MedCare Appointment System");
@@ -17,72 +19,143 @@ public class register extends form{
 
     }
     private void addGuiComponents(){
-        ImageIcon logoIcon = new ImageIcon("appoinment/src/image/434024649_1363976920953749_3166889348485858378_n.png"); // Replace "path_to_your_logo_image_file.jpg" with the actual path to your image file
-
+        ImageIcon logoIcon = new ImageIcon("appoinment/src/image/logo.png"); // Replace "path_to_your_logo_image_file.jpg" with the actual path to your image file
         // Create a JLabel to display the logo image
         JLabel logoLabel = new JLabel(logoIcon);
-        logoLabel.setBounds(-10, 10, 180, 100); // Adjust the position and size as needed
+        logoLabel.setBounds(42, -10, 300, 300); // Adjust the position and size as needed
         add(logoLabel);
+
+
         //register panel for registration and for new users
-        JLabel registerlabel = new JLabel("MedCare Registration");
-
-        registerlabel .setBounds(160, 25, 520, 100);
-        registerlabel.setForeground(commonconstant.BLUE_COLOR);
-
-        registerlabel.setFont(new Font("Dialog", Font.BOLD, 40));
-
-        registerlabel.setHorizontalAlignment(SwingConstants.CENTER);
+        JLabel registerlabel = new JLabel("MEDCare");
+        registerlabel .setBounds(470, 40, 520, 100);
+        registerlabel.setForeground(commonconstant.BUTTON_COLOR);
+        registerlabel.setFont(new Font("Dialog", Font.BOLD, 30));
 
         add(registerlabel);
+//
+        JLabel registerlabel2 = new JLabel("Registration");
+        registerlabel2 .setBounds(610, 40, 520, 100);
+        registerlabel2.setForeground(commonconstant.HOME_BG1_GRAY);
+        registerlabel2.setFont(new Font("Dialog", Font.BOLD, 30));
+
+        add(registerlabel2);
+
+
+//MEDCARE Medical Appointment!
+JLabel description1label = new JLabel("Welcome to ");
+        description1label.setBounds(45, 295, 400, 25);
+        description1label.setForeground(commonconstant.DARKERBLUE_REG);
+        description1label.setFont(new Font("Georgia",Font.PLAIN, 16));
+
+      add(description1label);
+      //
+        JLabel description1Alabel = new JLabel("MEDCARE");
+        description1Alabel.setBounds(135, 295, 400, 25);
+        description1Alabel.setForeground(commonconstant.DARKTEAL_REGISTER);
+        description1Alabel.setFont(new Font("Georgia",Font.BOLD, 20));
+        add(description1Alabel);
+//
+        JLabel description1Blabel = new JLabel("Medical Appointment!");
+        description1Blabel.setBounds(135, 325, 400, 25);
+        description1Blabel.setForeground(commonconstant.TEAL_REGISTER);
+        description1Blabel.setFont(new Font("Times New Roman",Font.BOLD, 21));
+        add(description1Blabel);
+
+//add description
+        JLabel description2label = new JLabel("We are dedicated to revolutionizing ");
+        description2label.setBounds(85, 400, 500, 25);
+        description2label.setForeground(commonconstant.HOME_BG1_BLUE);
+        description2label.setFont(new Font("Dialog",Font.PLAIN, 14));
+        add(description2label);
+
+        JLabel description2Alabel = new JLabel("the way you manage your healthcare appointments. ");
+        description2Alabel.setBounds(33, 425, 500, 25);
+        description2Alabel.setForeground(commonconstant.HOME_BG1_BLUE);
+        description2Alabel.setFont(new Font("Dialog",Font.PLAIN, 14));
+        add(description2Alabel);
+
+        JLabel description2Blabel = new JLabel("Our platform is designed to provide seamless ");
+        description2Blabel.setBounds(51, 450, 500, 25);
+        description2Blabel.setForeground(commonconstant.HOME_BG1_BLUE);
+        description2Blabel.setFont(new Font("Dialog",Font.PLAIN, 14));
+        add(description2Blabel);
+
+        JLabel description2Clabel = new JLabel("scheduling, ensuring you can access ");
+        description2Clabel.setBounds(77, 475, 500, 25);
+        description2Clabel.setForeground(commonconstant.HOME_BG1_BLUE);
+        description2Clabel.setFont(new Font("Dialog",Font.PLAIN, 14));
+        add(description2Clabel);
+
+        JLabel description2Dlabel = new JLabel("medical care conveniently and efficiently.");
+        description2Dlabel.setBounds(62, 500, 500, 25);
+        description2Dlabel.setForeground(commonconstant.HOME_BG1_BLUE);
+        description2Dlabel.setFont(new Font("Dialog",Font.PLAIN, 14));
+        add(description2Dlabel);
 
         // add new username label
-        JLabel usernamelabel = new JLabel("Username:");
-        usernamelabel.setBounds(200, 150, 400, 25);
+         JLabel namelabel = new JLabel("Username:");
+        namelabel.setBounds(450, 155, 400, 25);
+        namelabel.setForeground(commonconstant.SECONDARY_COLOR);
+        namelabel.setFont(new Font("Dialog",Font.PLAIN, 18));
+
+        JTextField nameField = new JTextField();
+        nameField.setBounds(450, 190, 350, 35);
+        nameField.setBackground(commonconstant.SECONDARY_COLOR);
+        nameField.setForeground(commonconstant.TEXT_COLOR);
+        nameField.setFont(new Font("Dialog", Font.PLAIN, 18));
+//
+        add(namelabel);
+        add(nameField);
+
+
+        // add email label
+        JLabel usernamelabel = new JLabel("E-mail Address:");
+        usernamelabel.setBounds(450, 240, 400, 25);
         usernamelabel.setForeground(commonconstant.SECONDARY_COLOR);
         usernamelabel.setFont(new Font("Dialog",Font.PLAIN, 18));
 
         JTextField usernameField = new JTextField();
-        usernameField.setBounds(200, 185, 450, 55);
+        usernameField.setBounds(450, 270, 350, 35);
         usernameField.setBackground(commonconstant.SECONDARY_COLOR);
         usernameField.setForeground(commonconstant.TEXT_COLOR);
-        usernameField.setFont(new Font("Dialog", Font.PLAIN, 24));
+        usernameField.setFont(new Font("Dialog", Font.PLAIN, 18));
 //
         add(usernamelabel);
         add(usernameField);
 
         //password label
         JLabel passwordlabel = new JLabel("Password:");
-        passwordlabel.setBounds(200, 255, 400, 25);
+        passwordlabel.setBounds(450, 315, 400, 25);
         passwordlabel.setFont(new Font("Dialog",Font.PLAIN, 18));
         passwordlabel.setForeground(commonconstant.SECONDARY_COLOR);
 
         JPasswordField passwordField = new JPasswordField();
-        passwordField.setBounds(200, 285, 450, 55);
+        passwordField.setBounds(450, 340, 350, 35);
         passwordField.setBackground(commonconstant.SECONDARY_COLOR);
         passwordField.setForeground(commonconstant.TEXT_COLOR);
-        passwordField.setFont(new Font("Dialog", Font.PLAIN, 24));
+        passwordField.setFont(new Font("Dialog", Font.PLAIN, 18));
 
         add(passwordlabel);
         add(passwordField);
 
-
-            //re-enter password
-        JLabel rePassword = new JLabel("Re-Enter Password:");
-        rePassword.setBounds(200, 365, 400, 25);
+            //confirm password
+        JLabel rePassword = new JLabel("Confirm Password:");
+        rePassword.setBounds(450, 390, 400, 25);
         rePassword.setFont(new Font("Dialog",Font.PLAIN, 18));
         rePassword.setForeground(commonconstant.SECONDARY_COLOR);
 
         JPasswordField repasswordField = new JPasswordField();
-        repasswordField.setBounds(200, 395, 450, 55);
+        repasswordField.setBounds(450, 415, 350, 35);
         repasswordField.setBackground(commonconstant.SECONDARY_COLOR);
         repasswordField.setForeground(commonconstant.TEXT_COLOR);
-        repasswordField.setFont(new Font("Dialog", Font.PLAIN, 24));
+        repasswordField.setFont(new Font("Dialog", Font.PLAIN, 18));
 
         add(rePassword);
         add(repasswordField);
 
-        //registration button
 
+        //registration button
         JButton regiserButton = new JButton("Register");
         regiserButton.setForeground(commonconstant.SECONDARY_COLOR);
 
@@ -90,7 +163,7 @@ public class register extends form{
 
         regiserButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         regiserButton.setBackground(commonconstant.BUTTON_COLOR);
-        regiserButton.setBounds(300, 520, 250,50);
+        regiserButton.setBounds(500, 500, 250,50);
         regiserButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -109,20 +182,26 @@ public class register extends form{
                      JOptionPane.showMessageDialog(login, "Registered Account Successfully");
 
                   }else {
-                  JOptionPane.showMessageDialog(register.this, "Error: Username already taken");
+                  JOptionPane.showMessageDialog(register.this, "Error: Username is already taken");
                   }
                 }else{
-                    JOptionPane.showMessageDialog(register.this, "Error. Username must contain 6 characters\n"+"and/or password must match in re-password");
+                    JOptionPane.showMessageDialog(register.this, "Error. Username must contain 6 characters\n"+"and/or password must match in confirm password");
                 }
             }
         });
         add(regiserButton);
 
-        // if the user have already an account or have an existing account
-        JLabel loginLabel = new JLabel("Have an account? Login Here");
-        loginLabel.setHorizontalAlignment(SwingConstants.CENTER);
+        //
+        JLabel loginLabel2 = new JLabel("Have already an account?");
+        loginLabel2.setForeground(commonconstant.SECONDARY_COLOR);
+        loginLabel2.setBounds(513, 575, 250, 30);
+        add(loginLabel2);
+
+        JLabel loginLabel = new JLabel("<html><u>LOGIN HERE!</u></html>");
         loginLabel.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        loginLabel.setForeground(commonconstant.SECONDARY_COLOR);
+        loginLabel.setForeground(commonconstant.DARKERBLUE_REG);
+        // if the user have already an account or have an existing account
+
         loginLabel.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -131,8 +210,40 @@ public class register extends form{
                 new loginpage().setVisible(true);
             }
         });
-        loginLabel.setBounds(300, 600, 250, 30);
+        loginLabel.setBounds(663, 575, 250, 30);
         add(loginLabel);
+
+        //Panel Transparent
+        JPanel panel1 = new JPanel();
+
+        panel1.setLayout(new BorderLayout());
+
+        JLabel panelLabel1 = new JLabel();
+        panel1.add(panelLabel1, BorderLayout.CENTER);
+        panel1.setBackground(new Color (0, 0, 0, 80));
+        // Set the size and location of the panel
+        panel1.setBounds( 400, 0, 700, 700);
+
+
+        // Add the panel to the main container
+        add(panel1);
+
+        //stethoscope background picture
+        ImageIcon image = new ImageIcon("appoinment/src/image/scope1.png");
+        JLabel image2 = new JLabel(image);
+        image2.setBounds(400, 0, 450, 700); // Adjust the position and size as needed
+        add(image2);
+
+
+        //abstract background picture
+        ImageIcon imageA = new ImageIcon("appoinment/src/image/abstract(2).png");
+        JLabel image3 = new JLabel(imageA);
+        image3.setBounds(-50, 0, 450, 700); // Adjust the position and size as needed
+        add(image3);
+
+
+
+
     }
     private boolean validateuserinput( String username, String password, String rePassword){
         //database
@@ -143,5 +254,7 @@ public class register extends form{
         if (!password.equals(rePassword)) return false;
 
         return true;
+
+
     }
 }
