@@ -4,11 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
+    <list default="true" id="e1b7777b-7ed8-46db-9dff-107d395bfc2f" name="Changes" comment="new">
+      <change afterPath="$PROJECT_DIR$/appoinment/src/image/AdobeStock_271181993-760x425 (1).jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/image/clockpic home (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/image/clockpic home (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/image/clockpic home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/image/clockpic hometrue.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appoinment/src/image/image-removebg-preview (2) (1).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/gui/home.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/home.java" afterDir="false" />
+
     <list default="true" id="eae16978-4cb5-4fab-8cf1-554724d410a2" name="Changes" comment="new admin pages and database table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appoinment/src/adminpage/AdminPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/adminpage/AdminPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appoinment/src/adminpage/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/adminpage/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appoinment/src/db/MyJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/db/MyJDBC.java" afterDir="false" />
+
       <change beforePath="$PROJECT_DIR$/appoinment/src/gui/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/launcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appoinment/src/gui/loginpage.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/loginpage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appoinment/src/gui/register.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/register.java" afterDir="false" />
@@ -19,11 +31,13 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
+
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -48,7 +62,11 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+
+    "last_opened_file_path": "D:/CC123_Project/appoinment/src/image",
+
     "last_opened_file_path": "C:/Users/NT371B5L/OneDrive/Documents/GitHub/CC123_Project/appointment/lib/mysql-connector-j-8.3.0.jar",
+
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -65,6 +83,40 @@
     ]
   }
 }]]></component>
+
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CC123_Project\appoinment\src\image" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CC123_Project\appoinment\src\image" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="launcher" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.launcher" />
+      <module name="CC123_Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.10-temurin-17.0.10-3183f394aec4-87f3d08d" />
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
+  </component>
+
+
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -75,6 +127,8 @@
       <updated>1712157979436</updated>
       <workItem from="1712157980850" duration="2457000" />
     </task>
+
+
     <task id="LOCAL-00001" summary="Merge branch 'main' into master">
       <option name="closed" value="true" />
       <created>1714039530270</created>
@@ -108,6 +162,7 @@
       <updated>1714541193540</updated>
     </task>
     <option name="localTasksCounter" value="5" />
+
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -118,7 +173,23 @@
       <map>
         <entry key="MAIN">
           <value>
+
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+
             <State />
+
           </value>
         </entry>
       </map>
@@ -126,9 +197,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new" />
+
+    <option name="LAST_COMMIT_MESSAGE" value="new" />
+
     <MESSAGE value="axyl" />
     <MESSAGE value="Merge branch 'main' into master" />
     <MESSAGE value="new admin pages and database table" />
     <option name="LAST_COMMIT_MESSAGE" value="new admin pages and database table" />
+
   </component>
 </project>
