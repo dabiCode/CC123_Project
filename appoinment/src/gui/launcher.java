@@ -1,5 +1,6 @@
 package gui;
 
+import adminpage.AdminPageController;
 import db.userDb;
 
 import javax.swing.*;
@@ -11,6 +12,7 @@ public class launcher {
             public void run() {
                new loginpage().setVisible(true);
                 //new Appoinment().setVisible(true);
+                //new AdminPageController().setVisible(true);
 //new Features().setVisible(true);
             //new home().setVisible(true);
               // System.out.println(MyJDBC.checkuser("username1234"));

@@ -8,13 +8,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyJDBC {
-    public static boolean register(String username, String password){
+    public static boolean register(String username,String email, String password, Boolean loggin){
         try{
             if (!checkuser(username)) {
                 Connection connection = DriverManager.getConnection(commonconstant.DB_URL, commonconstant.DB_USERNAME,commonconstant.DB_PASSWORD);
-                PreparedStatement insertUser = connection.prepareStatement("INSERT INTO "+ commonconstant.DB_TABLE_NAME+"(User_name, user_password, logged_in_users)"+ "VALUES(?, ?, ?)");
+                PreparedStatement insertUser = connection.prepareStatement("INSERT INTO "+ commonconstant.DB_TABLE_NAME+"(User_name,USer_email, user_password, logged_in_users)"+ "VALUES(?, ?, ?, ?)");
                 insertUser.setString(1, username);
-                insertUser.setString(2, password);
+                insertUser.setString(2, email);
+                insertUser.setString(3, password);
+                insertUser.setBoolean(4, loggin);
                 insertUser.executeUpdate();
                 return true;
             }
@@ -64,16 +66,17 @@ public class MyJDBC {
 
         try {
             Connection connection = DriverManager.getConnection(commonconstant.DB_URL, commonconstant.DB_USERNAME, commonconstant.DB_PASSWORD);
-            PreparedStatement statement = connection.prepareStatement("SELECT idUser_Id, User_name, user_password, logged_in_users FROM " + commonconstant.DB_TABLE_NAME + " WHERE logged_in_users = 1");
+            PreparedStatement statement = connection.prepareStatement("SELECT idUser_Id, User_name, User_email, user_password, logged_in_users FROM " + commonconstant.DB_TABLE_NAME + " WHERE logged_in_users = 1");
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
                 int id = resultSet.getInt("idUser_Id");
                 String username = resultSet.getString("User_name");
+                String email = resultSet.getString("User_email");
                 String password = resultSet.getString("user_password");
                 boolean isLoggedIn = resultSet.getBoolean("logged_in_users");
 
-                User user = new User(id, username, password, isLoggedIn);
+                User user = new User(id, username, email, password, isLoggedIn);
                 loggedInUsers.add(user);
             }
         } catch (SQLException e) {

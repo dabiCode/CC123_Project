@@ -1,5 +1,6 @@
 package gui;
 
+import adminpage.AdminPageController;
 import constant.commonconstant;
 import db.MyJDBC;
 
@@ -98,17 +99,38 @@ public class loginpage extends form {
 
                 String password = new String(passwordField.getPassword());
 
-                if(MyJDBC.validatelogin(username, password)){
+
+
+                    if (MyJDBC.validatelogin(username, password)) {
+                        loginpage.this.dispose();
+                        new home().setVisible(true);
+
+
+                        JOptionPane.showMessageDialog(loginpage.this, "Login Successful!");
+
+                    }
+                else if(admin(username, password)) {
+
+
+                    new AdminPageController().setVisible(true);
+
                     loginpage.this.dispose();
+                        JOptionPane.showMessageDialog(loginpage.this,"WELCOME ADMIN");
 
-                    new home().setVisible(true);
-
-                    JOptionPane.showMessageDialog(loginpage.this, "Login Successful!");
-
-                }else {
-
-                    JOptionPane.showMessageDialog(loginpage.this, "Login Failed...");
                 }
+                    else if(!admin(username, password)) {
+                        AdminPageController admin = new AdminPageController();
+                        admin.dispose();
+                        JOptionPane.showMessageDialog(loginpage.this,"Login Failed");
+                    }
+
+                    else {
+
+                        JOptionPane.showMessageDialog(loginpage.this, "Login Failed...");
+                    }
+
+
+
             }
         });
         add(loginButton);
@@ -155,5 +177,12 @@ public class loginpage extends form {
         JLabel image2 = new JLabel(image);
         image2.setBounds(0, 0, 900, 700); // Adjust the position and size as needed
         add(image2);
+    }
+
+    public boolean admin(String username, String password){
+        if(username.matches("brylle") && password.matches("password")) return true;
+        if (!username.matches("brylle"))    return false;
+        if(!password.matches("password"))   return false;
+        return true;
     }
 }

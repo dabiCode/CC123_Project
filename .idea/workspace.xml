@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1b7777b-7ed8-46db-9dff-107d395bfc2f" name="Changes" comment="Merge branch 'main' into master">
+    <list default="true" id="eae16978-4cb5-4fab-8cf1-554724d410a2" name="Changes" comment="new admin pages and database table">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/adminpage/AdminPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/adminpage/AdminPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/adminpage/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/adminpage/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appoinment/src/db/MyJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/db/MyJDBC.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appoinment/src/gui/launcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/launcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appoinment/src/gui/loginpage.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/loginpage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appoinment/src/gui/register.java" beforeDir="false" afterPath="$PROJECT_DIR$/appoinment/src/gui/register.java" afterDir="false" />
@@ -43,7 +46,7 @@
     "Application.launcher.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/NT371B5L/OneDrive/Documents/GitHub/CC123_Project/appointment/lib/mysql-connector-j-8.3.0.jar",
     "node.js.detected.package.eslint": "true",
@@ -72,6 +75,39 @@
       <updated>1712157979436</updated>
       <workItem from="1712157980850" duration="2457000" />
     </task>
+    <task id="LOCAL-00001" summary="Merge branch 'main' into master">
+      <option name="closed" value="true" />
+      <created>1714039530270</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1714039530270</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Merge branch 'main' into master">
+      <option name="closed" value="true" />
+      <created>1714372181885</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1714372181885</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Merge branch 'main' into master">
+      <option name="closed" value="true" />
+      <created>1714372704234</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1714372704234</updated>
+    </task>
+    <task id="LOCAL-00004" summary="new admin pages and database table">
+      <option name="closed" value="true" />
+      <created>1714541193540</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1714541193540</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,5 +123,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="new" />
+    <MESSAGE value="axyl" />
+    <MESSAGE value="Merge branch 'main' into master" />
+    <MESSAGE value="new admin pages and database table" />
+    <option name="LAST_COMMIT_MESSAGE" value="new admin pages and database table" />
   </component>
 </project>

@@ -112,19 +112,19 @@ public class register extends form {
 
 
         // add email label
-        JLabel usernamelabel = new JLabel("E-mail Address:");
-        usernamelabel.setBounds(450, 240, 400, 25);
-        usernamelabel.setForeground(commonconstant.SECONDARY_COLOR);
-        usernamelabel.setFont(new Font("Dialog",Font.PLAIN, 18));
+        JLabel email = new JLabel("E-mail Address:");
+        email.setBounds(450, 240, 400, 25);
+        email.setForeground(commonconstant.SECONDARY_COLOR);
+        email.setFont(new Font("Dialog",Font.PLAIN, 18));
 
-        JTextField usernameField = new JTextField();
+        JTextField emailField = new JTextField();
 
-        usernameField.setBounds(450, 270, 350, 35);
-        usernameField.setBackground(commonconstant.SECONDARY_COLOR);
-        usernameField.setForeground(commonconstant.TEXT_COLOR);
+        emailField.setBounds(450, 270, 350, 35);
+        emailField.setBackground(commonconstant.SECONDARY_COLOR);
+        emailField.setForeground(commonconstant.TEXT_COLOR);
 
-        add(usernamelabel);
-        add(usernameField);
+        add(email);
+        add(emailField);
 
         //password label
         JLabel passwordlabel = new JLabel("Password:");
@@ -176,12 +176,14 @@ public class register extends form {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //database validation for users
-                String username = usernameField.getText();
+                String username = nameField.getText();
                 String passsword = new String(passwordField.getPassword());
                 String rePassword = new String(repasswordField.getPassword());
+                String email = new String(emailField.getText());
+                Boolean logg = true;
 
-                if(validateuserinput(username, passsword, rePassword)){
-                    if(MyJDBC.register(username, passsword)){
+                if(validateuserinput(username, passsword, rePassword, email)){
+                    if(MyJDBC.register(username,email, passsword, logg)){
                         register.this.dispose();
 
                         loginpage login = new loginpage();
@@ -191,7 +193,7 @@ public class register extends form {
 
                     }else {  JOptionPane.showMessageDialog(register.this, "Error: Username is already taken");
                     }
-                }else{JOptionPane.showMessageDialog(register.this, "Error. Username must contain 6 characters\n"+"and/or password must match in confirm password");
+                }else{JOptionPane.showMessageDialog(register.this, "Error. Username must contain 6 characters\n"+"and/or password must match in confirm password\n"+"and/or email is missing");
                 }
             }
         });
@@ -252,13 +254,14 @@ public class register extends form {
 
 
     }
-    private boolean validateuserinput( String username, String password, String rePassword){
+    private boolean validateuserinput( String username, String password, String rePassword, String email){
         //database
-        if (username.length()==0 || password.length()==0||rePassword.length()==0) return false;
+        if (username.length()==0 || password.length()==0||rePassword.length()==0 || email.length() ==0) return false;
 
         if (username.length()<6)return  false;
 
         if (!password.equals(rePassword)) return false;
+        if(email.isBlank())   return false;
 
         return true;
 
