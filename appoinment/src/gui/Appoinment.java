@@ -143,7 +143,7 @@ public class Appoinment extends homepage {
         if (id == 0 || lastName.length() == 0 || firstname.length() == 0 || middle_name.length() == 0 || time.length() == 0)
             return false;
 
-        if (id == 0) return false;
+        if (id < 6) return false;
 
 
         return true;

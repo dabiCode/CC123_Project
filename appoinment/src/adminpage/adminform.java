@@ -1,10 +1,11 @@
-package gui;
+package adminpage;
 
 import constant.commonconstant;
 
 import javax.swing.*;
-public class form extends JFrame {
-    public  form (String title){
+
+public class adminform extends JFrame {
+    public adminform(String title){
         //The main gui panel
         super(title);
         setSize(850, 686);
@@ -15,8 +16,7 @@ public class form extends JFrame {
 
         setResizable(false);
 
-        getContentPane().setBackground(commonconstant.BLUE_COLOR);
+        getContentPane().setBackground(commonconstant.SECONDARY_COLOR);
 
     }
-
 }
