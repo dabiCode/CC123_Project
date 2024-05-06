@@ -1,27 +1,31 @@
 package adminpage;
 
+import java.time.LocalDate;
+
 public class schedules {
     private int id;
     private String last_name;
     private String first_name;
     private String midlle_name;
     private String time;
+    LocalDate date;
 
     public schedules() {
         // Default constructor
 
-        last_name = "";
-        first_name = "";
+        this.last_name = "";
+        this.first_name = "";
         midlle_name = "";
-        time = "";
+        this.time = "";
     }
 
-    public schedules(int id,String last_name, String first_name, String midlle_name, String time) {
+    public schedules(int id, String last_name, String first_name, String midlle_name, String time, LocalDate date) {
      this.id = id;
      this.last_name = last_name;
      this.first_name = first_name;
      this.midlle_name = midlle_name;
      this.time = time;
+     this.date = date;
 
     }
 
@@ -61,6 +65,13 @@ public class schedules {
 
     public void setTime(String time) {
         this.time = time;
+    }
+    public LocalDate getDate(){
+        return date;
+
+    }
+    public void setDate(LocalDate date){
+        this.date = date;
     }
 
 }

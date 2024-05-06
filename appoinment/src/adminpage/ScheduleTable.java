@@ -1,12 +1,12 @@
 package adminpage;
 
 import constant.commonconstant;
-import db.MyJDBC;
 import db.userDb;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.time.LocalDate;
 import java.util.List;
 
 public class ScheduleTable extends adminform{
@@ -23,6 +23,7 @@ public class ScheduleTable extends adminform{
         tableModel.addColumn("First Name");
         tableModel.addColumn("M.I");
         tableModel.addColumn("Time");
+        tableModel.addColumn("date");
 
         // Create the table
         BookedAppointment = new JTable(tableModel);
@@ -52,12 +53,13 @@ public class ScheduleTable extends adminform{
             String first_name = schedules.getFirst_name();
             String middle_name = schedules.getMidlle_name();
             String time = schedules.getTime();
+            LocalDate date = schedules.getDate();
             //debugger
             //  System.out.println("Logged-in Users:");
 
             // System.out.println( " Username: " + user.getUsername() + ", Password: " + user.getPassword()+", logged in:"+user.isLoggedIn());
 
-            tableModel.addRow(new Object[]{id, last_name, first_name, middle_name, time});
+            tableModel.addRow(new Object[]{id, last_name, first_name, middle_name, time, date});
 
 
         }
