@@ -5,6 +5,7 @@ import adminpage.schedules;
 import constant.commonconstant;
 
 import java.sql.*;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -75,7 +76,7 @@ public class userDb {
             Connection connection = DriverManager.getConnection(commonconstant.DB_USER, commonconstant.DB_USERNAME, commonconstant.DB_PASSWORD);
 
             PreparedStatement statement = connection.prepareStatement(
-                    "SELECT user_id, last_name, first_name, m_i, time FROM " + commonconstant.DB_USER_INFO
+                    "SELECT user_id, last_name, first_name, m_i, time, date FROM " + commonconstant.DB_USER_INFO
             );
             ResultSet resultSet = statement.executeQuery();
 
@@ -85,8 +86,9 @@ public class userDb {
                 String first_name = resultSet.getString("first_name");
                 String middle_name = resultSet.getString("m_i");
                 String time = resultSet.getString("time");
+                LocalDate date = resultSet.getDate("date").toLocalDate();
 
-                schedules appointment = new schedules(user_id, last_name, first_name, middle_name, time);
+                schedules appointment = new schedules(user_id, last_name, first_name, middle_name, time, date);
                 Appointment.add(appointment);
             }
         } catch (SQLException e) {
