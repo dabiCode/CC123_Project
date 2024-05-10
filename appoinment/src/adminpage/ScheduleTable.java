@@ -1,18 +1,22 @@
 package adminpage;
 
 import constant.commonconstant;
-import db.MyJDBC;
 import db.userDb;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 public class ScheduleTable extends adminform{
-    private final JTable BookedAppointment;
+    private JTable BookedAppointment;
     public ScheduleTable() {
         super("MedCare Appointment System");
+       addGuiComponents();
+    }
+    private void addGuiComponents() {
         JPanel mainPanel = new JPanel(new BorderLayout());
         mainPanel.setBackground(commonconstant.HOME_BG1_GRAY);
         mainPanel.setBounds(100, 100, 500, 500);
@@ -23,6 +27,7 @@ public class ScheduleTable extends adminform{
         tableModel.addColumn("First Name");
         tableModel.addColumn("M.I");
         tableModel.addColumn("Time");
+        tableModel.addColumn("date");
 
         // Create the table
         BookedAppointment = new JTable(tableModel);
@@ -40,6 +45,7 @@ public class ScheduleTable extends adminform{
         add(mainPanel);
 
         populateLoggedInUsersTable();
+
     }
     private void populateLoggedInUsersTable() {
         DefaultTableModel tableModel = (DefaultTableModel) BookedAppointment.getModel();
@@ -51,13 +57,14 @@ public class ScheduleTable extends adminform{
             String last_name = schedules.getlast_name();
             String first_name = schedules.getFirst_name();
             String middle_name = schedules.getMidlle_name();
-            String time = schedules.getTime();
+            LocalTime time = schedules.getTime();
+            LocalDate date = schedules.getDate();
             //debugger
             //  System.out.println("Logged-in Users:");
 
             // System.out.println( " Username: " + user.getUsername() + ", Password: " + user.getPassword()+", logged in:"+user.isLoggedIn());
 
-            tableModel.addRow(new Object[]{id, last_name, first_name, middle_name, time});
+            tableModel.addRow(new Object[]{id, last_name, first_name, middle_name, time, date});
 
 
         }

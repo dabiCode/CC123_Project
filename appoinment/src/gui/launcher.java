@@ -1,6 +1,7 @@
 package gui;
 
 import adminpage.AdminPageController;
+import adminpage.ScheduleTable;
 import db.userDb;
 
 import javax.swing.*;
@@ -14,17 +15,22 @@ public class launcher {
                 //new calendar().setVisible(true);
 //new AppointmentScheduler().setVisible(true);
 //               new register().setVisible(true);
-//                new Appoinment().setVisible(true);
+            //new Appoinment().setVisible(true);
 //new Features().setVisible(true);
-           new home().setVisible(true);
+          // new home().setVisible(true);
 //                new loginpage().setVisible(true);
 //new menu().setVisible(true);
             //new typeAppointment().setVisible(true);
+                new ScheduleTable().setVisible(true);
+
 
 
 
 
 //               new loginpage().setVisible(true);
+
+               //new loginpage().setVisible(true);
+
                 //new Appoinment().setVisible(true);
                 //new AdminPageController().setVisible(true);
 //new Features().setVisible(true);
