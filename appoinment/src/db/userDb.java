@@ -6,11 +6,12 @@ import constant.commonconstant;
 
 import java.sql.*;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class userDb {
-    public static boolean book(int id,String last_name, String first_name, String midlle_name, String time){
+    public static boolean book(int id,String last_name, String first_name, String midlle_name, LocalTime time){
         try{
             if (!checkuser(id)) {
                 Connection connection = DriverManager.getConnection(commonconstant.DB_USER, commonconstant.DB_USERNAME,commonconstant.DB_PASSWORD);
@@ -19,7 +20,8 @@ public class userDb {
                 insertUser.setString(2, last_name);
                 insertUser.setString(3, first_name);
                 insertUser.setString(4, midlle_name);
-                insertUser.setString(5, time);
+                insertUser.setTime(5, Time.valueOf(time));
+
 
                 insertUser.executeUpdate();
                 return true;
@@ -45,7 +47,7 @@ public class userDb {
         }
         return true;
     }
-    public static boolean validateuser(int id, String last_name, String first_name, String midlle_name, String time) {
+    public static boolean validateuser(int id, String last_name, String first_name, String midlle_name, LocalTime time) {
         try {
             Connection connection = DriverManager.getConnection(commonconstant.DB_USER, commonconstant.DB_USERNAME, commonconstant.DB_PASSWORD);
             connection.prepareStatement("INSERT INTO " + commonconstant.DB_USER_INFO + "(user_id, last_name,first_name, m_i, time)" + "VALUES(?, ?, ?, ?, ?)");
@@ -57,7 +59,7 @@ public class userDb {
             validate.setString(2, last_name);
             validate.setString(3, first_name);
             validate.setString(4, midlle_name);
-            validate.setString(5, time);
+            validate.setTime(5, Time.valueOf(time));
             ResultSet result = validate.executeQuery();
 
             if (!result.isBeforeFirst()) {
@@ -85,7 +87,7 @@ public class userDb {
                 String last_name = resultSet.getString("last_name");
                 String first_name = resultSet.getString("first_name");
                 String middle_name = resultSet.getString("m_i");
-                String time = resultSet.getString("time");
+                LocalTime time = resultSet.getTime("time").toLocalTime();
                 LocalDate date = resultSet.getDate("date").toLocalDate();
 
                 schedules appointment = new schedules(user_id, last_name, first_name, middle_name, time, date);

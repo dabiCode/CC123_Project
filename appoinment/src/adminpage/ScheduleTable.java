@@ -7,12 +7,16 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 
 public class ScheduleTable extends adminform{
-    private final JTable BookedAppointment;
+    private JTable BookedAppointment;
     public ScheduleTable() {
         super("MedCare Appointment System");
+       addGuiComponents();
+    }
+    private void addGuiComponents() {
         JPanel mainPanel = new JPanel(new BorderLayout());
         mainPanel.setBackground(commonconstant.HOME_BG1_GRAY);
         mainPanel.setBounds(100, 100, 500, 500);
@@ -41,6 +45,7 @@ public class ScheduleTable extends adminform{
         add(mainPanel);
 
         populateLoggedInUsersTable();
+
     }
     private void populateLoggedInUsersTable() {
         DefaultTableModel tableModel = (DefaultTableModel) BookedAppointment.getModel();
@@ -52,7 +57,7 @@ public class ScheduleTable extends adminform{
             String last_name = schedules.getlast_name();
             String first_name = schedules.getFirst_name();
             String middle_name = schedules.getMidlle_name();
-            String time = schedules.getTime();
+            LocalTime time = schedules.getTime();
             LocalDate date = schedules.getDate();
             //debugger
             //  System.out.println("Logged-in Users:");

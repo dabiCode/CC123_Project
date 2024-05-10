@@ -15,7 +15,7 @@ public class launcher {
                 //new calendar().setVisible(true);
 //new AppointmentScheduler().setVisible(true);
 //               new register().setVisible(true);
-//                new Appoinment().setVisible(true);
+            //new Appoinment().setVisible(true);
 //new Features().setVisible(true);
           // new home().setVisible(true);
 //                new loginpage().setVisible(true);

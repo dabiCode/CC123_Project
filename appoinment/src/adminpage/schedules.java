@@ -1,13 +1,14 @@
 package adminpage;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 
 public class schedules {
     private int id;
     private String last_name;
     private String first_name;
     private String midlle_name;
-    private String time;
+    LocalTime time;
     LocalDate date;
 
     public schedules() {
@@ -16,10 +17,10 @@ public class schedules {
         this.last_name = "";
         this.first_name = "";
         midlle_name = "";
-        this.time = "";
+
     }
 
-    public schedules(int id, String last_name, String first_name, String midlle_name, String time, LocalDate date) {
+    public schedules(int id, String last_name, String first_name, String midlle_name, LocalTime time, LocalDate date) {
      this.id = id;
      this.last_name = last_name;
      this.first_name = first_name;
@@ -59,11 +60,11 @@ public class schedules {
         this.midlle_name = midlle_name;
     }
 
-    public String getTime() {
+    public LocalTime getTime() {
         return time;
     }
 
-    public void setTime(String time) {
+    public void setTime(LocalTime time) {
         this.time = time;
     }
     public LocalDate getDate(){
