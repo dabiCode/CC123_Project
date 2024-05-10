@@ -17,11 +17,11 @@ public class launcher {
 //               new register().setVisible(true);
             //new Appoinment().setVisible(true);
 //new Features().setVisible(true);
-          // new home().setVisible(true);
+           new home().setVisible(true);
 //                new loginpage().setVisible(true);
 //new menu().setVisible(true);
             //new typeAppointment().setVisible(true);
-                new ScheduleTable().setVisible(true);
+               // new ScheduleTable().setVisible(true);
 
 
 
