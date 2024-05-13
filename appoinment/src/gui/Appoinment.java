@@ -1,8 +1,6 @@
 package gui;
 
 import constant.commonconstant;
-import db.MyJDBC;
-import db.userDb;
 
 import javax.swing.*;
 import java.awt.*;

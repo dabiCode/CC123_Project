@@ -1,6 +1,6 @@
 package db;
 
-import adminpage.User;
+
 import adminpage.schedules;
 import constant.commonconstant;
 
