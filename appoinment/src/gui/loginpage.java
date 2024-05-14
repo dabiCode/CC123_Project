@@ -1,6 +1,7 @@
 package gui;
 
 import adminpage.AdminPageController;
+import adminpage.ScheduleTable;
 import constant.commonconstant;
 import db.MyJDBC;
 
@@ -17,7 +18,6 @@ public class loginpage extends form {
         addGuiComponents();
 
     }
-
 //
     private void addGuiComponents(){
         ImageIcon logoIcon = new ImageIcon("appoinment/src/image/logotransparent.png"); // Replace "path_to_your_logo_image_file.jpg" with the actual path to your image file
@@ -112,14 +112,14 @@ public class loginpage extends form {
                 else if(admin(username, password)) {
 
 
-                    new AdminPageController().setVisible(true);
+                    new ScheduleTable().setVisible(true);
 
                     loginpage.this.dispose();
                         JOptionPane.showMessageDialog(loginpage.this,"WELCOME ADMIN");
 
                 }
                     else if(!admin(username, password)) {
-                        AdminPageController admin = new AdminPageController();
+                        ScheduleTable admin = new ScheduleTable();
                         admin.dispose();
                         JOptionPane.showMessageDialog(loginpage.this,"Login Failed");
                     }
