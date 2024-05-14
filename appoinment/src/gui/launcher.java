@@ -7,22 +7,11 @@ public class launcher {
             @Override
             public void run() {
 
-                //new calendar().setVisible(true);
-//new AppointmentScheduler().setVisible(true);
-//               new register().setVisible(true);
-            //new Appoinment().setVisible(true);
-//new Features().setVisible(true);
-           new home().setVisible(true);
-//                new loginpage().setVisible(true);
-//new menu().setVisible(true);
-          //  new typeAppointment().setVisible(true);
-               // new ScheduleTable().setVisible(true);
 
 
 
-//               new loginpage().setVisible(true);
 
-               //new loginpage().setVisible(true);
+               new loginpage().setVisible(true);
 
                 //new Appoinment().setVisible(true);
                 //new AdminPageController().setVisible(true);
