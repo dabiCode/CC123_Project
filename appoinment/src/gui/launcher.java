@@ -1,6 +1,7 @@
 package gui;
 
 
+import adminpage.AdminHome;
 import adminpage.ScheduleTable;
 import db.userDb;
 
@@ -15,29 +16,12 @@ public class launcher {
 
 
 
-                new ScheduleTable().setVisible(true);
-              //new loginpage().setVisible(true);
-                // Appoinment().setVisible(true);
-            //new Features().setVisible(true);
-           //new home().setVisible(true);
-
-                //new calendar().setVisible(true);
-//new AppointmentScheduler().setVisible(true);
-//               new register().setVisible(true);
-            //new Appoinment().setVisible(true);
-//new Features().setVisible(true);
-           new home().setVisible(true);
-//                new loginpage().setVisible(true);
-//new menu().setVisible(true);
-          //  new typeAppointment().setVisible(true);
-               // new ScheduleTable().setVisible(true);
 
 
-
-//               new loginpage().setVisible(true);
 
                //new loginpage().setVisible(true);
 
+                new AdminHome().setVisible(true);
                 //new Appoinment().setVisible(true);
                 //new AdminPageController().setVisible(true);
 //new Features().setVisible(true);
@@ -45,12 +29,7 @@ public class launcher {
 //new home().setVisible(true);
 
 
-//           new home().setVisible(true);
-//
-//               new register().setVisible(true);
-                //new Appoinment().setVisible(true);
-//new Features().setVisible(true);
-            //new home().setVisible(true);
+
 
 
               // System.out.println(MyJDBC.checkuser("username1234"));
