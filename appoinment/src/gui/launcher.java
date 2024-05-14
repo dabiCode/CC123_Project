@@ -15,10 +15,8 @@ public class launcher {
            new home().setVisible(true);
 //                new loginpage().setVisible(true);
 //new menu().setVisible(true);
-            //new typeAppointment().setVisible(true);
+          //  new typeAppointment().setVisible(true);
                // new ScheduleTable().setVisible(true);
-
-
 
 
 
