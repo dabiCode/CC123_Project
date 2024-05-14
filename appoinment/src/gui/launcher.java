@@ -17,7 +17,7 @@ public class launcher {
 //new menu().setVisible(true);
             //new typeAppointment().setVisible(true);
                // new ScheduleTable().setVisible(true);
-
+new HowToAppointment().setVisible(true);
 
 
 
