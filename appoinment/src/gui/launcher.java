@@ -16,7 +16,7 @@ public class launcher {
               //new loginpage().setVisible(true);
                 // Appoinment().setVisible(true);
             //new Features().setVisible(true);
-           // new home().setVisible(true);
+           //new home().setVisible(true);
               // System.out.println(MyJDBC.checkuser("username1234"));
                //System.out.println(MyJDBC.register("username1234", "password"));
                // System.out.println(MyJDBC.validatelogin("username1234", "password"));

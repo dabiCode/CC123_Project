@@ -243,7 +243,7 @@ public class register extends form {
 
 
         //abstract background picture
-        ImageIcon imageA = new ImageIcon("appoinment/src/image/abstract(2).png");
+        ImageIcon imageA = new ImageIcon("appoinment/src/image/abstract(2.png");
         JLabel image3 = new JLabel(imageA);
         image3.setBounds(-50, 0, 450, 700); // Adjust the position and size as needed
         add(image3);
