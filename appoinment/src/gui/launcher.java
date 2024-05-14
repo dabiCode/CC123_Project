@@ -1,6 +1,7 @@
 package gui;
 
 
+import adminpage.AdminHome;
 import adminpage.ScheduleTable;
 import db.userDb;
 
@@ -18,8 +19,9 @@ public class launcher {
 
 
 
-               new loginpage().setVisible(true);
+               //new loginpage().setVisible(true);
 
+                new AdminHome().setVisible(true);
                 //new Appoinment().setVisible(true);
                 //new AdminPageController().setVisible(true);
 //new Features().setVisible(true);

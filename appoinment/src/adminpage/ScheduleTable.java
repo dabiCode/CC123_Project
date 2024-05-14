@@ -91,7 +91,7 @@ public class ScheduleTable extends adminform{
             @Override
             public void mouseClicked(MouseEvent e) {
                 ScheduleTable.this.dispose();
-                new AppoitmentTable().setVisible(true);
+                new AdminPageController().setVisible(true);
             }
         });
         add(Appointment);

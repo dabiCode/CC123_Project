@@ -1,5 +1,6 @@
 package gui;
 
+import adminpage.AdminHome;
 import adminpage.AdminPageController;
 import adminpage.ScheduleTable;
 import constant.commonconstant;
@@ -112,14 +113,14 @@ public class loginpage extends form {
                 else if(admin(username, password)) {
 
 
-                    new ScheduleTable().setVisible(true);
+                    new AdminHome().setVisible(true);
 
                     loginpage.this.dispose();
                         JOptionPane.showMessageDialog(loginpage.this,"WELCOME ADMIN");
 
                 }
                     else if(!admin(username, password)) {
-                        ScheduleTable admin = new ScheduleTable();
+                       AdminHome admin = new AdminHome();
                         admin.dispose();
                         JOptionPane.showMessageDialog(loginpage.this,"Login Failed");
                     }
