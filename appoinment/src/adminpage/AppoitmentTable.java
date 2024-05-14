@@ -8,6 +8,7 @@ import gui.loginpage;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.time.LocalTime;
 import java.util.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -189,7 +190,7 @@ public class AppoitmentTable extends adminform {
             String last_name = schedules.getlast_name();
             String first_name = schedules.getFirst_name();
             String middle_name = schedules.getMidlle_name();
-            String time = schedules.getTime();
+            LocalTime time = schedules.getTime();
             //debugger
             //  System.out.println("Logged-in Users:");
 
