@@ -120,10 +120,21 @@ public class home extends homepage {
 
 
 
-//        JButton submitButton = new JButton("Book Appointment");
+       JButton submitButton = new JButton("Book Appointment");
+       submitButton.addMouseListener(new MouseAdapter(){
+           public void mouseClicked(MouseEvent e) {
+              home.this.dispose();
+              new Appoinment().setVisible(true);
+
+
+
+           }
+
+        });
 //        submitButton.addActionListener(e -> submitAppointment());
-//        appointmentTypePanel.add(submitButton); // Add the button to the appointment type panel
-//
+     appointmentTypePanel.add(submitButton);// Add the button to the appointment type panel
+
+
         
 
         JLabel about= new JLabel("About Us");
@@ -272,6 +283,26 @@ public class home extends homepage {
                 new Appoinment().setVisible(true);
             }
         });
+
+        JLabel howToBook = new JLabel("<html><u>Don't know how to book? click here</u></html>");
+        howToBook.setForeground(commonconstant.SECONDARY_COLOR);
+        howToBook.setFont(new Font("Dialogs", Font.BOLD, 12));
+        howToBook.setBounds(30,145,500, 17);
+
+        howToBook.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        howToBook.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+                home.this.dispose();
+
+                new HowToAppointment().setVisible(true);
+            }
+        });
+
+        appointmentPanel.add(howToBook);
+
+
 
 
         JPanel hoursPanel = new JPanel();
