@@ -26,7 +26,7 @@ public class register extends form {
         add(logoLabel);
 
 
-        //register panel for registration and for new users
+
 
         JLabel registerlabel = new JLabel("MEDCare");
         registerlabel .setBounds(470, 40, 520, 100);
@@ -39,9 +39,8 @@ public class register extends form {
         registerlabel2 .setBounds(610, 40, 520, 100);
         registerlabel2.setForeground(commonconstant.HOME_BG1_GRAY);
         registerlabel2.setFont(new Font("Dialog", Font.BOLD, 30));
-
-
         add(registerlabel2);
+
 
         //MEDCARE Medical Appointment!
         JLabel description1label = new JLabel("Welcome to ");
@@ -106,7 +105,6 @@ public class register extends form {
         nameField.setBackground(commonconstant.SECONDARY_COLOR);
         nameField.setForeground(commonconstant.TEXT_COLOR);
         nameField.setFont(new Font("Dialog", Font.PLAIN, 18));
-//
         add(namelabel);
         add(nameField);
 
@@ -234,8 +232,10 @@ public class register extends form {
         panel1.setBounds( 400, 0, 700, 700);
 
 
+
         // Add the panel to the main container
         add(panel1);
+
 
         //stethoscope background picture
         ImageIcon image = new ImageIcon("appoinment/src/image/scope1.png");
@@ -245,13 +245,10 @@ public class register extends form {
 
 
         //abstract background picture
-        ImageIcon imageA = new ImageIcon("appoinment/src/image/abstract(2).png");
+        ImageIcon imageA = new ImageIcon("appoinment/src/image/abstract(2.png");
         JLabel image3 = new JLabel(imageA);
         image3.setBounds(-50, 0, 450, 700); // Adjust the position and size as needed
         add(image3);
-
-
-
 
     }
     private boolean validateuserinput( String username, String password, String rePassword, String email){
@@ -268,4 +265,5 @@ public class register extends form {
 
     }
     }
+
 
