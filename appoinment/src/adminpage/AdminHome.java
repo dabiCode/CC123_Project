@@ -115,7 +115,7 @@ public class AdminHome extends adminform {
             @Override
             public void mouseClicked(MouseEvent e) {
                 AdminHome.this.dispose();
-                new AppoitmentTable().setVisible(true);
+                new AdminPageController().setVisible(true);
             }
         });
         add(Appointment);
