@@ -15,6 +15,10 @@ public class About extends homepage{
     }
 
     private void addGuiComponents() {
+
+
+
+
         ImageIcon logoIcon = new ImageIcon("appoinment/src/image/20240424_162915_0000.png"); // Replace "path_to_your_logo_image_file.jpg" with the actual path to your image file
 
         // Create a JLabel to display the logo image
@@ -36,7 +40,12 @@ public class About extends homepage{
         logoLabel3.setBounds(-1150, -350, 2500, 1500); // Adjust the position and size as needed
         add(logoLabel3);
 
-        JLabel menulabel = new JLabel("Medical Appointment");
+
+
+
+
+
+/*JLabel menulabel = new JLabel("Medical Appointment");
 
         menulabel.setBounds(90, 37, 400, 100);
         menulabel.setForeground(commonconstant.DARK_BLUE.brighter());
@@ -44,7 +53,7 @@ public class About extends homepage{
 
         menulabel.setHorizontalAlignment(SwingConstants.CENTER);
 
-        add(menulabel);
+        add(menulabel);*/
 
 
         //new time menu for the time selection mode
@@ -171,6 +180,7 @@ public class About extends homepage{
         comment7.setHorizontalAlignment(SwingConstants.CENTER);
         add(comment7);
 
+
         JPanel panel1 = new JPanel();
         panel1.setLayout(new BorderLayout());
 
@@ -182,10 +192,34 @@ public class About extends homepage{
         // Add the panel to the main container
         add(panel1);
 
-      /*  ImageIcon image = new ImageIcon("appoinment/src/image/WIN_20240302_07_45_28_Pro.jpg");
-        JLabel image2 = new JLabel(image);
-        image2.setBounds(400, 0, 450, 700); // Adjust the position and size as needed
-        add(image2);
-*/
+
+
+
+
+
+
+        JPanel panel2 = new JPanel();
+
+        panel2.setLayout(new BorderLayout());
+
+        JLabel panelLabel1 = new JLabel();
+        panel2.add(panelLabel1, BorderLayout.CENTER);
+        panel2.setBackground(new Color (255, 255, 255, 120));
+        // Set the size and location of the panel
+        panel2.setBounds( 0, 0, 1500, 700);
+
+        // Add the panel to the main container
+        add(panel2);
+
+
+        ImageIcon logoIcon3= new ImageIcon("appoinment/src/image/Background.jpg"); // Replace "path_to_your_logo_image_file.jpg" with the actual path to your image file
+
+        // Create a JLabel to display the logo image
+        JLabel logoLabel4 = new JLabel(logoIcon3);
+        logoLabel4.setBounds(0, 0, 1250, 800); // Adjust the position and size as needed
+        add(logoLabel4);
+
+
+
     }
 }

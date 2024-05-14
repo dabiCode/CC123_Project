@@ -1,19 +1,22 @@
 package gui;
 
 import constant.commonconstant;
-import db.MyJDBC;
-import db.userDb;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.time.LocalTime;
 
 import static db.userDb.book;
 import static db.userDb.validateuser;
 
 public class Appoinment extends homepage {
 
+    private LocalTime time;
+    private LocalTime getCurrentTime() {
+        return LocalTime.now();
+    }
     public Appoinment(){
         super("Appointment Booking");
         addGuiComponents();
@@ -21,7 +24,7 @@ public class Appoinment extends homepage {
     }
 
     private void addGuiComponents() {
-
+        time = getCurrentTime();
         JLabel id = new JLabel("ID");
         id .setBounds(10, 50, 300, 25);
         id .setForeground(commonconstant.TEXT_COLOR);
@@ -85,19 +88,7 @@ public class Appoinment extends homepage {
 
 
 
-        JLabel time = new JLabel("Time");
-        time.setBounds(10, 260, 300, 25);
-        time.setForeground(commonconstant.TEXT_COLOR);
-        time.setFont(new Font("Dialog",Font.PLAIN, 18));
 
-        JTextField timefield = new JTextField();
-        timefield.setBounds(10, 285, 350, 25);
-        timefield.setBackground(commonconstant.SECONDARY_COLOR);
-        timefield.setForeground(commonconstant.TEXT_COLOR);
-        timefield.setFont(new Font("Dialog", Font.PLAIN, 24));
-
-        add(time);
-        add(timefield);
 
         JButton Booknow = new JButton("Register");
         Booknow.setForeground(commonconstant.SECONDARY_COLOR);
@@ -114,11 +105,11 @@ public class Appoinment extends homepage {
                 String LastName = lastNamefield.getText();
                 String firstname = firstnamefield.getText();
                 String MI = Mifield.getText();
-                String time = timefield.getText();
 
 
-                if(validateuserinput(Id, LastName, firstname, MI, time)){
-                    if(userDb.book(Id,LastName, firstname, MI, time)){
+
+                if(validateuserinput(Id, LastName, firstname, MI)){
+                    if(book(Id,LastName, firstname, MI, time)){
                         Appoinment.this.dispose();
 
                         home home = new home();
@@ -138,9 +129,9 @@ public class Appoinment extends homepage {
         add(Booknow);
 
     }
-    private boolean validateuserinput( int id, String lastName, String firstname, String middle_name, String time ) {
+    private boolean validateuserinput( int id, String lastName, String firstname, String middle_name ) {
         //database
-        if (id == 0 || lastName.length() == 0 || firstname.length() == 0 || middle_name.length() == 0 || time.length() == 0)
+        if (id == 0 || lastName.length() == 0 || firstname.length() == 0 || middle_name.length() == 0 )
             return false;
 
         if (id < 6) return false;

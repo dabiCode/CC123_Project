@@ -3,6 +3,7 @@ package adminpage;
 
 public class User {
     private String username;
+    private String email;
     private String password;
     private boolean isLoggedIn;
     private int id;
@@ -15,9 +16,10 @@ public class User {
 
     }
 
-    public User(int id, String username, String password, boolean isLoggedIn) {
+    public User(int id, String username,String email, String password, boolean isLoggedIn) {
        this.id = id;
         this.username = username;
+        this.email = email;
         this.password = password;
         this.isLoggedIn = isLoggedIn;
     }
@@ -50,5 +52,13 @@ public class User {
     }
     public void setid(int id){
         this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

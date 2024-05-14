@@ -8,6 +8,8 @@ import gui.loginpage;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.List;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,9 +19,15 @@ import java.awt.event.MouseEvent;
 
 
 public class ScheduleTable extends adminform{
-    private final JTable BookedAppointment;
+    private JTable BookedAppointment;
     public ScheduleTable() {
         super("MedCare Appointment System");
+
+
+
+       addGuiComponents();
+    }
+    private void addGuiComponents() {
 
         JPanel mainPanel = new JPanel(new BorderLayout());
         mainPanel.setBackground(new Color (120, 187, 217, 255));
@@ -32,6 +40,7 @@ public class ScheduleTable extends adminform{
         tableModel.addColumn("First Name");
         tableModel.addColumn("M.I");
         tableModel.addColumn("Time");
+        tableModel.addColumn("date");
 
 
         //arrow
@@ -125,6 +134,7 @@ public class ScheduleTable extends adminform{
         populateLoggedInUsersTable();
 
 
+
         //logo
         ImageIcon image = new ImageIcon("appoinment/src/image/logotransparent.png");
         JLabel image6 = new JLabel(image);
@@ -172,6 +182,7 @@ public class ScheduleTable extends adminform{
         image3.setBounds ( 580, -20, 300, 702); // Adjust the position and size as needed
         add(image3);
 
+
     }
 
 
@@ -185,13 +196,14 @@ public class ScheduleTable extends adminform{
             String last_name = schedules.getlast_name();
             String first_name = schedules.getFirst_name();
             String middle_name = schedules.getMidlle_name();
-            String time = schedules.getTime();
+            LocalTime time = schedules.getTime();
+            LocalDate date = schedules.getDate();
             //debugger
             //  System.out.println("Logged-in Users:");
 
             // System.out.println( " Username: " + user.getUsername() + ", Password: " + user.getPassword()+", logged in:"+user.isLoggedIn());
 
-            tableModel.addRow(new Object[]{id, last_name, first_name, middle_name, time});
+            tableModel.addRow(new Object[]{id, last_name, first_name, middle_name, time, date});
 
 
         }

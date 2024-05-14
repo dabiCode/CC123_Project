@@ -23,6 +23,7 @@ public class AdminPageController extends adminform {
         DefaultTableModel tableModel = new DefaultTableModel();
         tableModel.addColumn("Id Number");
         tableModel.addColumn("Username");
+        tableModel.addColumn("Email");
         tableModel.addColumn("Password");
         tableModel.addColumn("Logged In");
         // Create the table
@@ -50,6 +51,7 @@ public class AdminPageController extends adminform {
         for (User user : loggedInUsers) {
             int id = user.getid();
             String username = user.getUsername();
+            String email = user.getEmail();
             // Consider removing password from the table for security reasons.
             String password = user.getPassword();
             boolean isLoggedIn = user.isLoggedIn();
@@ -59,7 +61,7 @@ public class AdminPageController extends adminform {
 
            // System.out.println( " Username: " + user.getUsername() + ", Password: " + user.getPassword()+", logged in:"+user.isLoggedIn());
 
-            tableModel.addRow(new Object[]{id, username, password, isLoggedIn});
+            tableModel.addRow(new Object[]{id, username, email, password, isLoggedIn});
 
 
         }

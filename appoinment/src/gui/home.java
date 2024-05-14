@@ -1,22 +1,12 @@
 package gui;
 import constant.commonconstant;
-import db.MyJDBC;
-/*import sa curve sa panel
- */
-import javax.swing.BorderFactory;
-import javax.swing.JFrame;
-import javax.swing.border.BevelBorder;
-
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
-
-
 public class home extends homepage {
+    private ButtonGroup appointmentTypeGroup;
+
     public home(){
         super("HealthAppointment");
         addGuiComponents();
@@ -65,7 +55,37 @@ public class home extends homepage {
         home.setBounds(630, 91, 100,25);
 
 
+        JPanel appointmentTypePanel = new JPanel();
+        appointmentTypePanel.setBackground(commonconstant.BUTTON_COLOR);
+        appointmentTypePanel.setLayout(new GridLayout(0, 1, 10, 10)); // Set layout for vertical arrangement
+        appointmentTypePanel.setBounds(500, 200, 300, 200); // Set the position and size of the panel
+        appointmentTypePanel.setVisible(false); // Initially make it invisible
+
+// Create radio buttons for different appointment types
+        JRadioButton generalCheckup = new JRadioButton("General Checkup");
+        JRadioButton dentalCheckup = new JRadioButton("Dental Checkup");
+        JRadioButton eyeCheckup = new JRadioButton("Eye Checkup");
+// Add more radio buttons as needed
+
+// Add radio buttons to a ButtonGroup to ensure only one selection
+         appointmentTypeGroup = new ButtonGroup();
+        appointmentTypeGroup.add(generalCheckup);
+        appointmentTypeGroup.add(dentalCheckup);
+        appointmentTypeGroup.add(eyeCheckup);
+
+// Add radio buttons to the panel
+        appointmentTypePanel.add(generalCheckup);
+        appointmentTypePanel.add(dentalCheckup);
+        appointmentTypePanel.add(eyeCheckup);
+
+        add(appointmentTypePanel); // Add the panel to the main container
         //reserved space for database
+
+
+
+
+
+
 
         JLabel Bapp= new JLabel("Book an Appointment");
         Bapp.setFont(new Font("Dialog", Font.BOLD, 18));
@@ -76,13 +96,23 @@ public class home extends homepage {
         Bapp.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                home.this.dispose();
+                appointmentTypePanel.setVisible(true);
 
-                new Appoinment().setVisible(true);
+
+
             }
         });
 
         Bapp.setBounds(695, 91, 200,25);
+
+
+
+
+//        JButton submitButton = new JButton("Book Appointment");
+//        submitButton.addActionListener(e -> submitAppointment());
+//        appointmentTypePanel.add(submitButton); // Add the button to the appointment type panel
+//
+        
 
         JLabel about= new JLabel("About Us");
         about.setFont(new Font("Dialog", Font.BOLD, 18));
@@ -107,14 +137,14 @@ public class home extends homepage {
         signin.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         signin.setForeground(commonconstant.SECONDARY_COLOR);
         signin.setBackground(commonconstant.HOME_BG1_BLUE);
-     signin.addMouseListener(new MouseAdapter() {
-         @Override
-         public void mouseClicked(MouseEvent e) {
-             super.mouseClicked(e);
-             home.this.dispose();
-             new loginpage().setVisible(true);
-         }
-     });
+        signin.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                home.this.dispose();
+                new loginpage().setVisible(true);
+            }
+        });
 
         signin.setBounds(1000, 81, 150,42);
 
@@ -186,8 +216,6 @@ public class home extends homepage {
 
 
 
-
-
         add(newlabel7);
         add(newlabel6);
         add(newlabel5);
@@ -200,23 +228,22 @@ public class home extends homepage {
         JPanel appointmentPanel = new JPanel();
         appointmentPanel.setLayout(null); // Set the layout to null to allow positioning components manually
         appointmentPanel.setBounds(670, 165, 520, 170); // Set the bounds of the panel
-        appointmentPanel.setBackground(commonconstant.PRIMARY_COLOR); // Set the background color of the panel
+        appointmentPanel.setBackground(new Color(1, 122, 194, 100));
 
         JLabel Appoinment = new JLabel("APPOINTMENT");
         Appoinment.setBounds(10, 10, 500, 50); // Adjust the bounds and position of the label
-        Appoinment.setForeground(commonconstant.SECONDARY_COLOR);
         Appoinment.setFont(new Font("Dialog", Font.BOLD, 38));
+        Appoinment.setForeground(commonconstant.SECONDARY_COLOR);
 
         JLabel AppoinmentBook = new JLabel("Want an appointment?");
         AppoinmentBook.setBounds(15, 50, 500, 50); // Adjust the bounds and position of the label
         AppoinmentBook.setForeground(commonconstant.SECONDARY_COLOR);
         AppoinmentBook.setFont(new Font("Dialog", Font.BOLD, 20));
 
-        ImageIcon AppointmentHomeImg= new ImageIcon("appoinment/src/image/codespic2.jpeg");
+        ImageIcon appointmentPic= new ImageIcon("appoinment/src/image/FINALAPPOINTMENTBGREMOVED.png");
+        JLabel HomeImgAppointmentlabel = new JLabel (appointmentPic);
+        HomeImgAppointmentlabel.setBounds(285, -85, 300, 350); // Adjust the position and size as needed
 
-        // Create a JLabel to display the logo image
-        JLabel HomeImgAppointmentlabel = new JLabel (AppointmentHomeImg);
-        HomeImgAppointmentlabel.setBounds(970, 175, 200, 150); // Adjust the position and size as needed
 
         JButton book = new JButton("Book Now");
         book.setFont(new Font("Dialog", Font.BOLD, 15));
@@ -234,95 +261,203 @@ public class home extends homepage {
             }
         });
 
-        add(HomeImgAppointmentlabel);
-        appointmentPanel.add(AppoinmentBook);
-        appointmentPanel.add(Appoinment); // Add the label to the panel
-        add(book);
+
+        JPanel hoursPanel = new JPanel();
+        hoursPanel.setLayout(null); // Set the layout to null to allow positioning components manually
+        hoursPanel.setBounds(670, 370, 520, 170); // Set the bounds of the panel
+        hoursPanel.setBackground(new Color(1, 122, 194, 100));
+
+        JLabel hours = new JLabel("OPENING HOURS");
+        hours.setLayout(null);
+        hours.setFont(new Font("Dialog", Font.BOLD, 38));
+        hours.setForeground(commonconstant.SECONDARY_COLOR);
+        hours.setBounds(10, 10, 500, 50); // Adjust the bounds and position of the label
 
 
 
-        add(appointmentPanel); // Add the panel to the main container
-
-
-        JLabel hours = new JLabel("Opening Hours");
-        hours.setBounds(700, 150, 400, 400);
-        hours.setForeground(commonconstant.TEXT_COLOR);
-        hours.setBackground(commonconstant.BLUE_COLOR);
-
-        hours.setFont(new Font("Dialog", Font.BOLD, 30));
-        hours.setHorizontalAlignment(SwingConstants.CENTER);
-
-        JButton time = new JButton("8:00am - 11:00am");
-        time.setFont(new Font("Dialog", Font.BOLD, 10));
+        JButton time = new JButton("8:00 AM-11:00 AM");
+        time.setFont(new Font("Dialog", Font.BOLD, 14));
 
         time.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         time.setForeground(commonconstant.TEXT_COLOR);
-        time.setBounds(700, 400, 140,20);
+        time.setBounds(675, 438, 159,30);
 
-        JButton time2 = new JButton("1:00pm - 5:00pm");
-        time2.setFont(new Font("Dialog", Font.BOLD, 10));
+        time.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                home.this.dispose();
+
+                new Appoinment().setVisible(true);
+            }
+        });
+
+
+        JLabel to = new JLabel("TO");
+        to.setFont(new Font("Dialog", Font.BOLD, 18));
+        to.setBounds(842, 428, 30, 50);
+        to.setForeground(commonconstant.TEXT_COLOR);
+
+        JButton time2 = new JButton("1:00 PM-5:00 PM ");
+        time2.setFont(new Font("Dialog", Font.BOLD, 14));
 
         time2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        time2.setBounds(877, 438, 159,30);
         time2.setForeground(commonconstant.TEXT_COLOR);
-        time2.setBounds(700, 400, 140,20);
+        time2.setBounds(877, 438, 159,30);
 
+        time2.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                home.this.dispose();
+
+                new Appoinment().setVisible(true);
+            }
+        });
+
+        ImageIcon hoursHomeImg= new ImageIcon("appoinment/src/image/FINALHOURSBGREMOVED.png");
+        JLabel HomeClockImg = new JLabel(hoursHomeImg);
+        HomeClockImg.setBounds(955, 285, 300, 350);
+
+
+
+        JLabel openingDays = new JLabel("<html><u>Monday to Saturday</u></html>");
+        openingDays.setFont(new Font("Dialog", Font.BOLD, 30));
+        openingDays.setForeground(commonconstant.SECONDARY_COLOR);
+        openingDays.setBounds(25, 110, 500,40);
+        openingDays.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+
+
+        appointmentPanel.add(Appoinment); // Add the label to the panel
+        appointmentPanel.add(AppoinmentBook);
+        appointmentPanel.add( HomeImgAppointmentlabel);
+        add(book);
+        add(appointmentPanel); // Add the panel to the main container
+
+        hoursPanel.add(openingDays);
+        hoursPanel.add(hours);
         add(time2);
+        add(HomeClockImg);
+        add(to);
         add(time);
-        add(hours);
+        add(hoursPanel);
 
-        JLabel contact = new JLabel("Emergency Service");
-        contact.setBounds(700, 300, 400, 400);
-        contact.setBackground(commonconstant.BLUE_COLOR);
-        contact.setForeground(commonconstant.TEXT_COLOR);
 
-        contact.setFont(new Font("Dialog", Font.BOLD, 30));
-        contact.setHorizontalAlignment(SwingConstants.CENTER);
+        JPanel contact = new JPanel(null);
+        contact.setBounds(670, 575, 520, 170);
+        contact.setBackground(new Color(1, 122, 194, 100));
 
-        JButton emergency = new JButton("Contact Us");
-        emergency.setFont(new Font("Dialog", Font.BOLD, 10));
+        JLabel emergencyServices = new JLabel("EMERGENCY SERVICE");
+        emergencyServices.setFont (new Font ("Dialog", Font.BOLD, 38));
+        emergencyServices.setBounds(10,15, 500, 40);
+        emergencyServices.setForeground(commonconstant.SECONDARY_COLOR);
 
-        emergency.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        emergency.setForeground(commonconstant.TEXT_COLOR);
-        emergency.setBounds(650, 600, 140,20);
+        ImageIcon contactPic = new ImageIcon("appoinment/src/image/CONTACTFINALBGREMOVED.png");
+        JLabel homeContactImg = new JLabel(contactPic);
+        homeContactImg.setBounds(285, -85, 300, 350);
 
-        add(emergency);
+         JLabel EmergencyText = new JLabel("Emergency Service");
+        EmergencyText.setBounds(700, 300, 400, 400);
+        EmergencyText.setBackground(commonconstant.BLUE_COLOR);
+        EmergencyText.setForeground(commonconstant.TEXT_COLOR);
+
+        ImageIcon telephonePic = new ImageIcon("appoinment/src/image/telephoneImgSmall.png");
+        JLabel telImgSmall = new JLabel(telephonePic);
+        telImgSmall.setBounds(5,55, 30, 25);
+
+
+        JLabel txttelNum = new JLabel("TEL. NO.");
+        txttelNum.setForeground(commonconstant.SECONDARY_COLOR);
+        txttelNum.setFont(new Font("Dialog", Font.BOLD, 23));
+        txttelNum.setBounds(40,45, 200, 50);
+
+        JLabel telNum = new JLabel("<html><u> 0234-567-890</u></html>");
+        telNum.setForeground(commonconstant.TEXT_COLOR);
+        telNum.setFont(new Font("Dialog", Font.BOLD, 17));
+        telNum.setBounds(15,75, 300, 50);
+
+
+        ImageIcon gmailPicSmall  = new ImageIcon("appoinment/src/image/gmaiLogoSmall.png");
+        JLabel gmailImg = new JLabel(gmailPicSmall);
+        gmailImg.setBounds(170,55, 30, 25);
+
+        JLabel txtEmail = new JLabel("E-MAIL:");
+        txtEmail.setForeground(commonconstant.SECONDARY_COLOR);
+        txtEmail.setFont(new Font("Dialog", Font.BOLD, 23));
+        txtEmail.setBounds(205,45, 300, 50);
+
+        JLabel email = new JLabel("<html><u> MedCare.cebu.ph@gmail.com</u></html>");
+        email.setFont(new Font("Dialog", Font.BOLD, 17));
+        email.setForeground(commonconstant.TEXT_COLOR);
+        email.setBounds(180,75, 300, 50);
+
+
+        contact.add(emergencyServices);
+        contact.add(telImgSmall);
+        contact.add(txttelNum);
+        contact.add(telNum);
+        contact.add(gmailImg);
+        contact.add(txtEmail);
+        contact.add(email);
+        contact.add(homeContactImg);
         add(contact);
+
+
+// chelsie kuwang - add bg pic sa right side
 
         JPanel panel1 = new JPanel();
         panel1.setLayout(new BorderLayout());
 
         JLabel panelLabel = new JLabel();
         panel1.add(panelLabel, BorderLayout.CENTER);
-
-        // Set the size and location of the panel
         panel1.setBounds(0, 0, 1300, 150);
 
-        // Add the panel to the main container
-        add(panel1);
+        add(panel1); // white panel above
+
+
 
         JPanel panel2 = new JPanel();
-        panel2.setLayout(new BorderLayout());
-
-        JLabel panelLabel2 = new JLabel();
+        panel2.setBounds(0, 150, 630, 650);
         panel2.add(panelLabel, BorderLayout.CENTER);
         panel2.setBackground(commonconstant.HOME_BG1_GRAY);
-        // Set the size and location of the panel
-        panel2.setBounds(0, 150, 630, 650);
 
-        // Add the panel to the main container
-        add(panel2);
+        ImageIcon BG_Grayish = new ImageIcon ("appoinment/src/image/doctorsIMG.png");
+        JLabel HomeBG_left = new JLabel(BG_Grayish);
+        HomeBG_left.setBounds(0, 0, 900, 650);
 
-        setLayout(null); // Set the layout of the parent container to null
+        panel2.add(HomeBG_left);
+        add(panel2); // grayish bg
+
+
+
+        ImageIcon bgBlue = new ImageIcon ("appoinment/src/image/flat-lay-medical-desk-with-equipment (1).jpg");
+        JLabel bgBlueRight = new JLabel(bgBlue);
+        bgBlueRight.setBounds(0, 0, 650, 650);
 
         JPanel panel3 = new JPanel(new BorderLayout());
         JLabel panelLabel3 = new JLabel();
         panel3.add(panelLabel3, BorderLayout.CENTER);
         panel3.setBackground(commonconstant.HOME_BG1_BLUE);
         panel3.setBounds(600, 150, 650, 650);
-        add(panel3);
+
+        panel3.add(bgBlueRight);
+                add(panel3); //blue bg right
 
 
 
 
+        ImageIcon BG_blue = new ImageIcon ("appoinment/src/image/hex3.png");
+        JLabel BG_right = new JLabel(BG_blue);
+        HomeBG_left.setBounds(0, 0, 900, 650);
     }
+//    private void submitAppointment() {
+//        // Get the selected radio button
+//        JRadioButton selectedButton = (JRadioButton) appointmentTypeGroup.getSelection().getSelectedObjects()[0];
+//        String appointmentType = selectedButton.getText();
+//
+//        home.this.dispose();
+//        new Appoinment().setVisible(true);
+//        // Store the appointment type in the database
+//        // Replace the following line with your database code
+//        System.out.println("Selected Appointment Type: " + appointmentType);
+//    }
 }
