@@ -1,4 +1,10 @@
 package gui;
+
+
+import adminpage.ScheduleTable;
+import db.userDb;
+
+
 import javax.swing.*;
 
 public class launcher {
@@ -6,6 +12,7 @@ public class launcher {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
+
 
 
 
@@ -20,12 +27,8 @@ public class launcher {
 //new home().setVisible(true);
 
 
-//           new home().setVisible(true);
-//
-//               new register().setVisible(true);
-                //new Appoinment().setVisible(true);
-//new Features().setVisible(true);
-            //new home().setVisible(true);
+
+
 
               // System.out.println(MyJDBC.checkuser("username1234"));
                //System.out.println(MyJDBC.register("username1234", "password"));

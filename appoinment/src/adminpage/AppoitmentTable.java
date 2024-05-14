@@ -8,7 +8,6 @@ import gui.loginpage;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 import java.awt.event.ActionEvent;
@@ -17,17 +16,10 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 
-
-public class ScheduleTable extends adminform{
-    private JTable BookedAppointment;
-    public ScheduleTable() {
+public class AppoitmentTable extends adminform {
+    private final JTable BookedAppointment;
+    public AppoitmentTable() {
         super("MedCare Appointment System");
-
-
-
-       addGuiComponents();
-    }
-    private void addGuiComponents() {
 
         JPanel mainPanel = new JPanel(new BorderLayout());
         mainPanel.setBackground(new Color (120, 187, 217, 255));
@@ -40,7 +32,6 @@ public class ScheduleTable extends adminform{
         tableModel.addColumn("First Name");
         tableModel.addColumn("M.I");
         tableModel.addColumn("Time");
-        tableModel.addColumn("date");
 
 
         //arrow
@@ -51,7 +42,7 @@ public class ScheduleTable extends adminform{
 
 
         //SCHEDULE TABLE LABEL
-        JLabel schedlabel = new JLabel("Schedule Table");
+        JLabel schedlabel = new JLabel("Appointment Table");
         schedlabel .setBounds(345, 0, 520, 100);
         schedlabel.setForeground(commonconstant.DARK_BLUE);
         schedlabel.setFont(new Font("Georgia", Font.BOLD, 30));
@@ -70,7 +61,7 @@ public class ScheduleTable extends adminform{
         home.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                ScheduleTable.this.dispose();
+                AppoitmentTable.this.dispose();
 
                 new AdminHome().setVisible(true);
 
@@ -79,22 +70,26 @@ public class ScheduleTable extends adminform{
         add(home);
 
 
-        //appointment table button
-        JButton Appointment= new JButton("Appointment Table");
-        Appointment.setBounds(25, 250, 170, 40);
-        Appointment.setForeground(commonconstant.SECONDARY_COLOR);
-        Appointment.setBackground(commonconstant.HOME_BG1_BLUE);;
-        Appointment.setFont(new Font("Dialog", Font.BOLD, 15));
+        //Schedule Table BUTTON
+        JButton ScheduleTable = new JButton("Schedule Table");
+        ScheduleTable.setFont(new Font("Dialog", Font.BOLD, 15));
+        ScheduleTable.setBounds(25, 250, 170, 40);
+        ScheduleTable.setBackground(commonconstant.HOME_BG1_BLUE);
+        ScheduleTable.setForeground(commonconstant.SECONDARY_COLOR);
 
-        Appointment.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        Appointment.addMouseListener(new MouseAdapter() {
+        ScheduleTable.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        //set mouse listener
+        ScheduleTable.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                ScheduleTable.this.dispose();
-                new AppoitmentTable().setVisible(true);
+
+                new ScheduleTable().setVisible(true);
+
             }
         });
-        add(Appointment);
+
+        add(ScheduleTable);
+
 
 
         //Log out BUTTON
@@ -109,7 +104,7 @@ public class ScheduleTable extends adminform{
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                ScheduleTable.this.dispose();
+                AppoitmentTable.this.dispose();
                 new loginpage().setVisible(true);
             }
         });
@@ -134,12 +129,12 @@ public class ScheduleTable extends adminform{
         populateLoggedInUsersTable();
 
 
-
         //logo
         ImageIcon image = new ImageIcon("appoinment/src/image/logotransparent.png");
         JLabel image6 = new JLabel(image);
         image6.setBounds ( -25, -70, 250, 250); // Adjust the position and size as needed
         add(image6);
+
 
         //Panel Transparent upper
         JPanel panel2 = new JPanel();
@@ -182,7 +177,6 @@ public class ScheduleTable extends adminform{
         image3.setBounds ( 580, -20, 300, 702); // Adjust the position and size as needed
         add(image3);
 
-
     }
 
 
@@ -197,13 +191,12 @@ public class ScheduleTable extends adminform{
             String first_name = schedules.getFirst_name();
             String middle_name = schedules.getMidlle_name();
             LocalTime time = schedules.getTime();
-            LocalDate date = schedules.getDate();
             //debugger
             //  System.out.println("Logged-in Users:");
 
             // System.out.println( " Username: " + user.getUsername() + ", Password: " + user.getPassword()+", logged in:"+user.isLoggedIn());
 
-            tableModel.addRow(new Object[]{id, last_name, first_name, middle_name, time, date});
+            tableModel.addRow(new Object[]{id, last_name, first_name, middle_name, time});
 
 
         }
@@ -211,4 +204,18 @@ public class ScheduleTable extends adminform{
         BookedAppointment.revalidate();
     }
 
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
