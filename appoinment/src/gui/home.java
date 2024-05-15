@@ -1,6 +1,7 @@
 package gui;
 import constant.commonconstant;
 import db.MyJDBC;
+import db.userDb;
 /*import sa curve sa panel
  */
 import javax.swing.BorderFactory;
@@ -67,34 +68,6 @@ public class home extends homepage {
         home.setBounds(630, 91, 100,25);
 
 
-        JPanel appointmentTypePanel = new JPanel();
-        appointmentTypePanel.setBackground(commonconstant.BUTTON_COLOR);
-        appointmentTypePanel.setLayout(new GridLayout(0, 1, 10, 10)); // Set layout for vertical arrangement
-        appointmentTypePanel.setBounds(500, 200, 300, 200); // Set the position and size of the panel
-        appointmentTypePanel.setVisible(false); // Initially make it invisible
-
-// Create radio buttons for different appointment types
-        JRadioButton generalCheckup = new JRadioButton("General Checkup");
-        JRadioButton dentalCheckup = new JRadioButton("Dental Checkup");
-        JRadioButton eyeCheckup = new JRadioButton("Eye Checkup");
-// Add more radio buttons as needed
-
-// Add radio buttons to a ButtonGroup to ensure only one selection
-         appointmentTypeGroup = new ButtonGroup();
-        appointmentTypeGroup.add(generalCheckup);
-        appointmentTypeGroup.add(dentalCheckup);
-        appointmentTypeGroup.add(eyeCheckup);
-
-// Add radio buttons to the panel
-        appointmentTypePanel.add(generalCheckup);
-        appointmentTypePanel.add(dentalCheckup);
-        appointmentTypePanel.add(eyeCheckup);
-
-        add(appointmentTypePanel); // Add the panel to the main container
-        //reserved space for database
-
-
-
 
 
 
@@ -108,7 +81,8 @@ public class home extends homepage {
         Bapp.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                appointmentTypePanel.setVisible(true);
+                home.this.dispose();
+                new Appoinment().setVisible(true);
 
 
 
@@ -120,22 +94,6 @@ public class home extends homepage {
 
 
 
-       JButton submitButton = new JButton("Book Appointment");
-       submitButton.addMouseListener(new MouseAdapter(){
-           public void mouseClicked(MouseEvent e) {
-              home.this.dispose();
-              new Appoinment().setVisible(true);
-
-
-
-           }
-
-        });
-//        submitButton.addActionListener(e -> submitAppointment());
-     appointmentTypePanel.add(submitButton);// Add the button to the appointment type panel
-
-
-        
 
         JLabel about= new JLabel("About Us");
         about.setFont(new Font("Dialog", Font.BOLD, 18));
@@ -492,15 +450,6 @@ public class home extends homepage {
         JLabel BG_right = new JLabel(BG_blue);
         HomeBG_left.setBounds(0, 0, 900, 650);
     }
-//    private void submitAppointment() {
-//        // Get the selected radio button
-//        JRadioButton selectedButton = (JRadioButton) appointmentTypeGroup.getSelection().getSelectedObjects()[0];
-//        String appointmentType = selectedButton.getText();
-//
-//        home.this.dispose();
-//        new Appoinment().setVisible(true);
-//        // Store the appointment type in the database
-//        // Replace the following line with your database code
-//        System.out.println("Selected Appointment Type: " + appointmentType);
-//    }
+
+
 }
