@@ -40,7 +40,13 @@ public class ScheduleTable extends adminform{
         tableModel.addColumn("First Name");
         tableModel.addColumn("M.I");
         tableModel.addColumn("Time");
-        tableModel.addColumn("date");
+        tableModel.addColumn("Date");
+        tableModel.addColumn("Gender");
+        tableModel.addColumn("Address");
+        tableModel.addColumn("Number");
+        tableModel.addColumn("Appointment");
+
+
 
 
         //arrow
@@ -80,7 +86,7 @@ public class ScheduleTable extends adminform{
 
 
         //appointment table button
-        JButton Appointment= new JButton("Appointment Table");
+        JButton Appointment= new JButton("Account Table");
         Appointment.setBounds(25, 250, 170, 40);
         Appointment.setForeground(commonconstant.SECONDARY_COLOR);
         Appointment.setBackground(commonconstant.HOME_BG1_BLUE);;
@@ -198,12 +204,16 @@ public class ScheduleTable extends adminform{
             String middle_name = schedules.getMidlle_name();
             LocalTime time = schedules.getTime();
             LocalDate date = schedules.getDate();
+            String gender = schedules.getGender();
+            String address = schedules.getAddress();
+            int number = schedules.getNumber();
+            String appointment = schedules.getAppointment();
             //debugger
             //  System.out.println("Logged-in Users:");
 
             // System.out.println( " Username: " + user.getUsername() + ", Password: " + user.getPassword()+", logged in:"+user.isLoggedIn());
 
-            tableModel.addRow(new Object[]{id, last_name, first_name, middle_name, time, date});
+            tableModel.addRow(new Object[]{id, last_name, first_name, middle_name, time, date, gender, address, number, appointment});
 
 
         }

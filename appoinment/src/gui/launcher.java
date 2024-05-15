@@ -14,11 +14,7 @@ public class launcher {
             @Override
             public void run() {
 
-
-//                new AdminHome().setVisible(true);
-//                new Appoinment().setVisible(true);
-//                new AdminPageController().setVisible(true);
-//new Features().setVisible(true);
+               
 
     new home().setVisible(true);
 new HowToAppointment().setVisible(true);
