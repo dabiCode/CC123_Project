@@ -14,18 +14,12 @@ public class launcher {
             @Override
             public void run() {
 
-                
-
-               new home().setVisible(true);
-                //new loginpage().setVisible(true);
-                //new AdminHome().setVisible(true);
-                //new Appoinment().setVisible(true);
-                //new AdminPageController().setVisible(true);
-//new Features().setVisible(true);
-
-//new home().setVisible(true);
 
 
+    new home().setVisible(true);
+new HowToAppointment().setVisible(true);
+
+                new ContactUs().setVisible(true);
 
 
               // System.out.println(MyJDBC.checkuser("username1234"));
@@ -34,6 +28,9 @@ public class launcher {
                //System.out.println(userDb.checkuser(Integer.parseInt("1234")));
               // System.out.println(userDb.validateuser(Integer.parseInt("123"), "admin", "admin","admin", "4:20:30"));
                 //System.out.println(userDb.menu(Integer.parseInt("123"), "admin", "admin","admin", "4:20:30"));
+
+
+
 
             }
         });
