@@ -73,7 +73,7 @@ public class AdminPageController extends adminform {
 
 
         //appointment table button
-        JButton Appointment= new JButton("Appointment Table");
+        JButton Appointment= new JButton("Account Table");
         Appointment.setBounds(25, 250, 170, 40);
         Appointment.setForeground(commonconstant.SECONDARY_COLOR);
         Appointment.setBackground(commonconstant.HOME_BG1_BLUE);;
