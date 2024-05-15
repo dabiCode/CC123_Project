@@ -1,3 +1,4 @@
+
 package gui;
 
 import constant.commonconstant;
@@ -10,14 +11,17 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.time.LocalTime;
+import java.util.Enumeration;
 
 import static db.userDb.book;
 import static db.userDb.validateuser;
+
 
 public class Appoinment extends homepage {
 
     private LocalTime time;
     private ButtonGroup appointmentTypeGroup;
+    private JRadioButton selectedAppointmentType;
 
     private LocalTime getCurrentTime() {
         return LocalTime.now();
@@ -165,14 +169,16 @@ public class Appoinment extends homepage {
         submitButton.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e) {
 
-                        Appoinment.this.dispose();
-                        new home().setVisible(true);
+
+                Appoinment.this.dispose();
+                new home().setVisible(true);
             }
 
         });
 //        submitButton.addActionListener(e -> submitAppointment());
-        appointmentTypePanel.add(submitButton);// Add the button to the appointment type panel
+        submitButton.addActionListener(e -> submitAppointment());// Add the button to the appointment type panel
 
+        appointmentTypePanel.add(submitButton);
         JButton Booknow = new JButton("Register");
         Booknow.setForeground(commonconstant.SECONDARY_COLOR);
 
@@ -191,9 +197,18 @@ public class Appoinment extends homepage {
                 String gender = genderflield.getText();
                 String Address = Addressfield.getText();
                 int number = Integer.parseInt(numberfield.getText());
-                String appointment = generalCheckup.getText();
-                      appointment = dentalCheckup.getText();
-                      appointment = eyeCheckup.getText();
+                appointmentTypePanel.setVisible(true);
+                String appointment = null;
+
+                if (selectedAppointmentType != null) {
+
+
+                    appointment = selectedAppointmentType.getText();
+                } else {
+                    JOptionPane.showMessageDialog(Appoinment.this, "Please select an appointment type");
+                    return; // Exit the method if no appointment type is selected
+                }
+
 
 
 
@@ -202,9 +217,12 @@ public class Appoinment extends homepage {
 
 
                         home home = new home();
-                        appointmentTypePanel.setVisible(true);
+                        Appoinment.this.dispose();
+                        new home().setVisible(true);
+
 
                         JOptionPane.showMessageDialog(home, "Booked account successfully");
+
 
                     }else {
                         JOptionPane.showMessageDialog(Appoinment.this, "Error: Name already taken");
@@ -239,4 +257,22 @@ public class Appoinment extends homepage {
 
         return true;
     }
-}
+    // Add this method
+    private void submitAppointment() {
+        ButtonModel selectedModel = appointmentTypeGroup.getSelection();
+        if (selectedModel != null) {
+            for (Enumeration<AbstractButton> buttons = appointmentTypeGroup.getElements(); buttons.hasMoreElements();) {
+                AbstractButton button = buttons.nextElement();
+                if (button.getModel() == selectedModel) {
+                    selectedAppointmentType = (JRadioButton) button;
+                    String selectedAppointment = selectedAppointmentType.getText();
+                    JOptionPane.showMessageDialog(Appoinment.this,"Selected appointment type: " + selectedAppointment);
+                    // Do something with the selected appointment type
+                    break;
+                }
+            }
+        } else {
+            JOptionPane.showMessageDialog(Appoinment.this,"No appointment type selected.");
+        }
+    }
+} 
