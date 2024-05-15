@@ -59,12 +59,12 @@ public class home extends homepage {
         //new time menu for the time selection mode
 
         JLabel home = new JLabel("Home");
-        home.setFont(new Font("Dialog", Font.BOLD, 18));
+        home.setFont(new Font("Dialog", Font.BOLD, 20));
 
 
         home.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         home.setForeground(commonconstant.TEXT_COLOR);
-        home.setBounds(630, 91, 100,25);
+        home.setBounds(670, 91, 100,25);
 
 
         JPanel appointmentTypePanel = new JPanel();
@@ -94,28 +94,24 @@ public class home extends homepage {
         //reserved space for database
 
 
+        
+        JLabel ContactUs= new JLabel("Contact Us");
+        ContactUs.setFont(new Font("Dialog", Font.BOLD, 20));
 
-
-
-
-
-        JLabel Bapp= new JLabel("Book an Appointment");
-        Bapp.setFont(new Font("Dialog", Font.BOLD, 18));
-
-        Bapp.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        Bapp.setForeground(commonconstant.TEXT_COLOR);
+        ContactUs.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        ContactUs.setForeground(commonconstant.TEXT_COLOR);
         //set mouse listener
-        Bapp.addMouseListener(new MouseAdapter() {
+        ContactUs.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                appointmentTypePanel.setVisible(true);
 
-
+                home.this.dispose();
+                new ContactUs().setVisible(true);
 
             }
         });
 
-        Bapp.setBounds(695, 91, 200,25);
+        ContactUs.setBounds(860, 91, 200,25);
 
 
 
@@ -127,7 +123,7 @@ public class home extends homepage {
         
 
         JLabel about= new JLabel("About Us");
-        about.setFont(new Font("Dialog", Font.BOLD, 18));
+        about.setFont(new Font("Dialog", Font.BOLD, 20));
 
         about.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         about.setForeground(commonconstant.TEXT_COLOR);
@@ -136,12 +132,12 @@ public class home extends homepage {
             @Override
             public void mouseClicked(MouseEvent e) {
                 home.this.dispose();
-
                 new About().setVisible(true);
             }
+
         });
 
-        about.setBounds(900, 91, 160,25);
+        about.setBounds(755, 91, 160,25);
 
         JButton signin= new JButton("Logout");
         signin.setFont(new Font("Dialog", Font.BOLD, 18));
@@ -163,7 +159,7 @@ public class home extends homepage {
 
         add(signin);
         add(about);
-        add(Bapp);
+        add(ContactUs);
         add(home);
 
 
@@ -274,6 +270,7 @@ public class home extends homepage {
         });
 
 
+
         JPanel hoursPanel = new JPanel();
         hoursPanel.setLayout(null); // Set the layout to null to allow positioning components manually
         hoursPanel.setBounds(670, 370, 520, 170); // Set the bounds of the panel
@@ -354,67 +351,44 @@ public class home extends homepage {
         add(hoursPanel);
 
 
-        JPanel contact = new JPanel(null);
-        contact.setBounds(670, 575, 520, 170);
-        contact.setBackground(new Color(1, 122, 194, 100));
+        JPanel services = new JPanel(null);
+        services.setBounds(670, 575, 520, 170);
+        services.setBackground(new Color(1, 122, 194, 100));
 
-        JLabel emergencyServices = new JLabel("EMERGENCY SERVICE");
-        emergencyServices.setFont (new Font ("Dialog", Font.BOLD, 38));
-        emergencyServices.setBounds(10,15, 500, 40);
-        emergencyServices.setForeground(commonconstant.SECONDARY_COLOR);
+        JLabel availableServices = new JLabel("AVAILABLE SERVICES");
+        availableServices.setFont (new Font ("Dialog", Font.BOLD, 38));
+        availableServices.setBounds(10,15, 500, 40);
+        availableServices.setForeground(commonconstant.SECONDARY_COLOR);
 
-        ImageIcon contactPic = new ImageIcon("appoinment/src/image/CONTACTFINALBGREMOVED.png");
-        JLabel homeContactImg = new JLabel(contactPic);
-        homeContactImg.setBounds(285, -85, 300, 350);
+        JLabel generalConsult = new JLabel("- General Consultation");
+        generalConsult.setFont(new Font("Dialogs", Font.BOLD, 20));
+        generalConsult.setForeground(commonconstant.TEXT_COLOR);
+        generalConsult.setBounds(10,55, 300, 30);
 
-         JLabel EmergencyText = new JLabel("Emergency Service");
-        EmergencyText.setBounds(700, 300, 400, 400);
-        EmergencyText.setBackground(commonconstant.BLUE_COLOR);
-        EmergencyText.setForeground(commonconstant.TEXT_COLOR);
+        JLabel labDiagnostics = new JLabel("- Laboratory and Diagnostics");
+        labDiagnostics.setFont(new Font("Dialogs", Font.BOLD, 20));
+        labDiagnostics.setForeground(commonconstant.TEXT_COLOR);
+        labDiagnostics.setBounds(10, 80, 300, 30);
 
-        ImageIcon telephonePic = new ImageIcon("appoinment/src/image/telephoneImgSmall.png");
-        JLabel telImgSmall = new JLabel(telephonePic);
-        telImgSmall.setBounds(5,55, 30, 25);
+        JLabel rehabilitationMeds = new JLabel("- Rehabilitation and Medicine");
+        rehabilitationMeds.setFont(new Font("Dialogs", Font.BOLD, 20));
+        rehabilitationMeds.setForeground(commonconstant.TEXT_COLOR);
+        rehabilitationMeds.setBounds(10,105, 300, 30);
 
-
-        JLabel txttelNum = new JLabel("TEL. NO.");
-        txttelNum.setForeground(commonconstant.SECONDARY_COLOR);
-        txttelNum.setFont(new Font("Dialog", Font.BOLD, 23));
-        txttelNum.setBounds(40,45, 200, 50);
-
-        JLabel telNum = new JLabel("<html><u> 0234-567-890</u></html>");
-        telNum.setForeground(commonconstant.TEXT_COLOR);
-        telNum.setFont(new Font("Dialog", Font.BOLD, 17));
-        telNum.setBounds(15,75, 300, 50);
+        JLabel onlineConsult = new JLabel("- Online Consultation");
+        onlineConsult.setFont(new Font("Dialogs", Font.BOLD, 20));
+        onlineConsult.setForeground(commonconstant.TEXT_COLOR);
+        onlineConsult.setBounds(10,130, 300, 30);
 
 
-        ImageIcon gmailPicSmall  = new ImageIcon("appoinment/src/image/gmaiLogoSmall.png");
-        JLabel gmailImg = new JLabel(gmailPicSmall);
-        gmailImg.setBounds(170,55, 30, 25);
-
-        JLabel txtEmail = new JLabel("E-MAIL:");
-        txtEmail.setForeground(commonconstant.SECONDARY_COLOR);
-        txtEmail.setFont(new Font("Dialog", Font.BOLD, 23));
-        txtEmail.setBounds(205,45, 300, 50);
-
-        JLabel email = new JLabel("<html><u> MedCare.cebu.ph@gmail.com</u></html>");
-        email.setFont(new Font("Dialog", Font.BOLD, 17));
-        email.setForeground(commonconstant.TEXT_COLOR);
-        email.setBounds(180,75, 300, 50);
+        services.add(onlineConsult);
+        services.add(availableServices);
+        services.add(generalConsult);
+        services.add(labDiagnostics);
+        services.add(rehabilitationMeds);
+        add(services);
 
 
-        contact.add(emergencyServices);
-        contact.add(telImgSmall);
-        contact.add(txttelNum);
-        contact.add(telNum);
-        contact.add(gmailImg);
-        contact.add(txtEmail);
-        contact.add(email);
-        contact.add(homeContactImg);
-        add(contact);
-
-
-// chelsie kuwang - add bg pic sa right side
 
         JPanel panel1 = new JPanel();
         panel1.setLayout(new BorderLayout());
@@ -457,19 +431,26 @@ public class home extends homepage {
 
 
 
-        ImageIcon BG_blue = new ImageIcon ("appoinment/src/image/hex3.png");
-        JLabel BG_right = new JLabel(BG_blue);
-        HomeBG_left.setBounds(0, 0, 900, 650);
+
+
+
+
+
+
+
+
+
     }
 //    private void submitAppointment() {
-//        // Get the selected radio button
+////         Get the selected radio button
+//
 //        JRadioButton selectedButton = (JRadioButton) appointmentTypeGroup.getSelection().getSelectedObjects()[0];
 //        String appointmentType = selectedButton.getText();
 //
 //        home.this.dispose();
 //        new Appoinment().setVisible(true);
-//        // Store the appointment type in the database
-//        // Replace the following line with your database code
+////         Store the appointment type in the database
+////         Replace the following line with your database code
 //        System.out.println("Selected Appointment Type: " + appointmentType);
-//    }
-}
+    }
+
