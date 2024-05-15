@@ -14,7 +14,7 @@ public class launcher {
             @Override
             public void run() {
 
-               
+
 
     new home().setVisible(true);
 new HowToAppointment().setVisible(true);

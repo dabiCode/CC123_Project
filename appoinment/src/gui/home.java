@@ -236,7 +236,7 @@ public class home extends homepage {
             public void mouseClicked(MouseEvent e) {
                 home.this.dispose();
 
-                new Appoinment().setVisible(true);
+                new typeAppointment().setVisible(true);
             }
         });
 
