@@ -28,7 +28,7 @@ private void addContactGUI(){
 
     // Create a JLabel to display the Icon image for Contact Us.
     JLabel fbLabel = new JLabel(fbIcon);
-    fbLabel.setBounds(215, 390, 120, 135); // Adjust the position and size as needed
+    fbLabel.setBounds(215, 392, 140, 125); // Adjust the position and size as needed
     add(fbLabel);
 
     JLabel emailLabel = new JLabel(emailIcon);
@@ -36,7 +36,7 @@ private void addContactGUI(){
     add(emailLabel);
 
     JLabel cellNum = new JLabel(contactIcon);
-    cellNum.setBounds(520, 370, 140, 150); // Adjust the position and size as needed
+    cellNum.setBounds(520, 392, 140, 125); // Adjust the position and size as needed
     add(cellNum);
 
     // Create type Contacts
