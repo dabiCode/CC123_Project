@@ -4,6 +4,7 @@ import constant.commonconstant;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.rmi.server.RemoteCall;
 import javax.swing.*;
 
 public class ContactUs extends homepage {
@@ -16,12 +17,77 @@ public class ContactUs extends homepage {
     }
 
 private void addContactGUI(){
-
     JPanel contactPanel = new JPanel();
     contactPanel.setLayout(null);
     contactPanel.setBounds(0,0, 1300, 900);
 
     ImageIcon logoIcon = new ImageIcon("appoinment/src/image/434024649_1363976920953749_3166889348485858378_n.png"); // Replace "path_to_your_logo_image_file.jpg" with the actual path to your image file
+    ImageIcon fbIcon = new ImageIcon("appoinment/src/image/fblogs.png"); // Replace "path_to_your_logo_image_file.jpg" with the actual path to your image file
+    ImageIcon emailIcon = new ImageIcon("appoinment/src/image/email.png");
+    ImageIcon contactIcon = new ImageIcon("appoinment/src/image/Untitled design (3)-1.png");
+
+    // Create a JLabel to display the Icon image for Contact Us.
+    JLabel fbLabel = new JLabel(fbIcon);
+    fbLabel.setBounds(215, 390, 120, 135); // Adjust the position and size as needed
+    add(fbLabel);
+
+    JLabel emailLabel = new JLabel(emailIcon);
+    emailLabel.setBounds(830, 392, 140, 125); // Adjust the position and size as needed
+    add(emailLabel);
+
+    JLabel cellNum = new JLabel(contactIcon);
+    cellNum.setBounds(520, 370, 140, 150); // Adjust the position and size as needed
+    add(cellNum);
+
+    // Create type Contacts
+    JLabel ConInfo = new JLabel("Contact Us");
+    ConInfo.setBounds(320, 165, 520, 100);
+    ConInfo.setForeground(commonconstant.DARKERBLUE_REG );
+    ConInfo.setFont(new Font("Rockwell", Font.BOLD, 47));
+    ConInfo.setHorizontalAlignment(SwingConstants.CENTER);
+    add(ConInfo);
+
+    JLabel Remarks = new JLabel("Any questions or remarks?Just write us a message!");
+    Remarks.setBounds(320, 200, 520, 100);
+    Remarks.setForeground(commonconstant.DARKERBLUE_REG );
+    Remarks.setFont(new Font("Rockwell", Font.BOLD, 20));
+    Remarks.setHorizontalAlignment(SwingConstants.CENTER);
+    add(Remarks);
+
+    JLabel FB = new JLabel("www.facebook.com/MedCareCEBU");
+    FB.setBounds(33, 485, 520, 100);
+    FB.setForeground(commonconstant.DARK_BLUE);
+    FB.setFont(new Font("Rockwell", Font.BOLD, 19));
+    FB.setHorizontalAlignment(SwingConstants.CENTER);
+    add(FB);
+
+    JLabel Email = new JLabel("MedCare.cebu.ph@gmail.com");
+    Email.setBounds(639, 483, 520, 105);
+    Email.setForeground(commonconstant.DARK_BLUE);
+    Email.setFont(new Font("Rockwell", Font.BOLD, 19));
+    Email.setHorizontalAlignment(SwingConstants.CENTER);
+    add(Email);
+
+    JLabel tNumber = new JLabel("Tele(0234-567-890)");
+    tNumber.setBounds(334, 480, 520, 105);
+    tNumber.setForeground(commonconstant.DARK_BLUE);
+    tNumber.setFont(new Font("Rockwell", Font.BOLD, 19));
+    tNumber.setHorizontalAlignment(SwingConstants.CENTER);
+    add(tNumber);
+
+    JLabel cNumber = new JLabel("Phone(091431431431)");
+    cNumber.setBounds(335, 500, 520, 105);
+    cNumber.setForeground(commonconstant.DARK_BLUE);
+    cNumber.setFont(new Font("Rockwell", Font.BOLD, 19));
+    cNumber.setHorizontalAlignment(SwingConstants.CENTER);
+    add(cNumber);
+
+    JLabel reminder = new JLabel("Available Monday-Saturday from 8-11am to 1-4pm");
+    reminder.setBounds(335, 600, 550, 150);
+    reminder.setForeground(commonconstant.TEXT_COLOR);
+    reminder.setFont(new Font("Arial", Font.BOLD,16));
+    reminder.setHorizontalAlignment(SwingConstants.CENTER);
+    add(reminder);
 
     // Create a JLabel to display the logo image
     JLabel logoLabel = new JLabel(logoIcon);
@@ -47,7 +113,6 @@ private void addContactGUI(){
     menulabel2.setFont(new Font("Dialog", Font.BOLD, 20));
 
     menulabel2.setHorizontalAlignment(SwingConstants.CENTER);
-
 
 
     //new time menu for the time selection mode
@@ -184,7 +249,5 @@ private void addContactGUI(){
 
     add(BGlightblue);
     add(bgBluePic);
-
-
 }
 }
