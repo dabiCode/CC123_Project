@@ -99,6 +99,7 @@ public class home extends homepage {
         about.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         about.setForeground(commonconstant.TEXT_COLOR);
         //set mouse listener
+
         about.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -109,6 +110,27 @@ public class home extends homepage {
         });
 
         about.setBounds(755, 91, 160,25);
+
+        // new edit nothing button
+
+        JButton nothing = new JButton("");
+        nothing.setBounds(0, 0, 0, 0);
+        nothing.setForeground(new Color(0, 0, 0, 0));
+        nothing.setBackground(new Color(0, 0, 0, 0));
+        nothing.setFont(new Font("Dialog", Font.BOLD, 0));
+
+        nothing.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        //set mouse listener
+        nothing.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                home.this.dispose();
+
+                new loginpage().setVisible(true);
+
+            }
+        });
+
 
         JButton signin= new JButton("Logout");
         signin.setFont(new Font("Dialog", Font.BOLD, 18));
@@ -127,7 +149,7 @@ public class home extends homepage {
 
         signin.setBounds(1000, 81, 150,42);
 
-
+        add(nothing); // new edit
         add(signin);
         add(about);
         add(ContactUs);
@@ -228,7 +250,7 @@ public class home extends homepage {
         book.setFont(new Font("Dialog", Font.BOLD, 15));
 
         book.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        book.setBounds(710, 280, 150, 30);
+        book.setBounds(710, 265, 150, 30); //gi-edit ang y ani
         book.setForeground(commonconstant.TEXT_COLOR);
         //set mouse listener
         book.addMouseListener(new MouseAdapter() {
@@ -341,7 +363,7 @@ public class home extends homepage {
         add(time);
         add(hoursPanel);
 
-
+//new edit chelsie txt spaces sa available services
         JPanel services = new JPanel(null);
         services.setBounds(670, 575, 520, 170);
         services.setBackground(new Color(1, 122, 194, 100));
@@ -351,32 +373,59 @@ public class home extends homepage {
         availableServices.setBounds(10,15, 500, 40);
         availableServices.setForeground(commonconstant.SECONDARY_COLOR);
 
-        JLabel generalConsult = new JLabel("- General Consultation");
-        generalConsult.setFont(new Font("Dialogs", Font.BOLD, 20));
+        JLabel generalConsult = new JLabel("    General Consultation");
+        generalConsult.setFont(new Font("Dialogs", Font.BOLD, 18));
         generalConsult.setForeground(commonconstant.TEXT_COLOR);
         generalConsult.setBounds(10,55, 300, 30);
 
-        JLabel labDiagnostics = new JLabel("- Laboratory and Diagnostics");
-        labDiagnostics.setFont(new Font("Dialogs", Font.BOLD, 20));
+
+        JLabel labDiagnostics = new JLabel("    Laboratory and Diagnostics");
+        labDiagnostics.setFont(new Font("Dialogs", Font.BOLD, 18));
         labDiagnostics.setForeground(commonconstant.TEXT_COLOR);
         labDiagnostics.setBounds(10, 80, 300, 30);
 
-        JLabel rehabilitationMeds = new JLabel("- Rehabilitation and Medicine");
-        rehabilitationMeds.setFont(new Font("Dialogs", Font.BOLD, 20));
+        JLabel rehabilitationMeds = new JLabel("    Rehabilitation and Medicine");
+        rehabilitationMeds.setFont(new Font("Dialogs", Font.BOLD, 18));
         rehabilitationMeds.setForeground(commonconstant.TEXT_COLOR);
         rehabilitationMeds.setBounds(10,105, 300, 30);
 
-        JLabel onlineConsult = new JLabel("- Online Consultation");
-        onlineConsult.setFont(new Font("Dialogs", Font.BOLD, 20));
+        JLabel onlineConsult = new JLabel("    Online Consultation");
+        onlineConsult.setFont(new Font("Dialogs", Font.BOLD, 18));
         onlineConsult.setForeground(commonconstant.TEXT_COLOR);
         onlineConsult.setBounds(10,130, 300, 30);
 
+        ImageIcon servicesImg = new ImageIcon("appoinment/src/image/FINALPICSERVICES.png");
+        JLabel AvailableServicesPic = new JLabel(servicesImg);
+        AvailableServicesPic.setBounds(335,-10,200,200);
+
+        ImageIcon arrowServicesImg1 = new ImageIcon("appoinment/src/image/finalPicArrow.png");
+        JLabel arrowImg1 = new JLabel(arrowServicesImg1);
+        arrowImg1.setBounds(-85,-30,200,200);
+
+    ImageIcon arrowServicesImg2 = new ImageIcon("appoinment/src/image/finalPicArrow.png");
+        JLabel arrowImg2 = new JLabel(arrowServicesImg2);
+        arrowImg2.setBounds(-85,-5,200,200);
+
+    ImageIcon arrowServicesImg3 = new ImageIcon("appoinment/src/image/finalPicArrow.png");
+        JLabel arrowImg3 = new JLabel(arrowServicesImg3);
+        arrowImg3.setBounds(-85,20,200,200);
+
+    ImageIcon arrowServicesImg4 = new ImageIcon("appoinment/src/image/finalPicArrow.png");
+        JLabel arrowImg4 = new JLabel(arrowServicesImg4);
+        arrowImg4.setBounds(-85,45,200,200);
+
+//new edit arrow
+        services.add(arrowImg1);
+        services.add(arrowImg2);
+        services.add(arrowImg3);
+        services.add(arrowImg4);
 
         services.add(onlineConsult);
         services.add(availableServices);
         services.add(generalConsult);
         services.add(labDiagnostics);
         services.add(rehabilitationMeds);
+        services.add(AvailableServicesPic);
         add(services);
 
 
