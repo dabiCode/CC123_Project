@@ -16,9 +16,9 @@ public class launcher {
 
                 
 
-                new home().setVisible(true);
+                //new home().setVisible(true);
                 //new loginpage().setVisible(true);
-                //new AdminHome().setVisible(true);
+                new AdminHome().setVisible(true);
                 //new Appoinment().setVisible(true);
                 //new AdminPageController().setVisible(true);
 //new Features().setVisible(true);
