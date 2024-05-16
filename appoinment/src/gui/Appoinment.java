@@ -1,3 +1,4 @@
+
 package gui;
 
 import constant.commonconstant;
@@ -10,14 +11,17 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.time.LocalTime;
+import java.util.Enumeration;
 
 import static db.userDb.book;
 import static db.userDb.validateuser;
+
 
 public class Appoinment extends homepage {
 
     private LocalTime time;
     private ButtonGroup appointmentTypeGroup;
+    private JRadioButton selectedAppointmentType;
 
     private LocalTime getCurrentTime() {
         return LocalTime.now();
@@ -29,14 +33,18 @@ public class Appoinment extends homepage {
     }
 
     private void addGuiComponents() {
-        time = getCurrentTime();
+      time = getCurrentTime();
+
+
+
+
         JLabel id = new JLabel("ID");
-        id .setBounds(10, 50, 300, 25);
+        id .setBounds(10, 100, 300, 25);
         id .setForeground(commonconstant.TEXT_COLOR);
         id .setFont(new Font("Dialog",Font.PLAIN, 18));
 
         JTextField IdField = new JTextField();
-        IdField.setBounds(10, 85, 350, 25);
+        IdField.setBounds(50, 100, 350, 25);
         IdField.setBackground(commonconstant.SECONDARY_COLOR);
         IdField.setForeground(commonconstant.TEXT_COLOR);
         IdField.setFont(new Font("Dialog", Font.PLAIN, 24));
@@ -46,12 +54,12 @@ public class Appoinment extends homepage {
 
 
         JLabel lastName = new JLabel("Last Name");
-        lastName.setBounds(10, 110, 300, 25);
+        lastName.setBounds(10, 1000, 300, 25);
         lastName .setForeground(commonconstant.TEXT_COLOR);
         lastName .setFont(new Font("Dialog",Font.PLAIN, 18));
 
         JTextField lastNamefield = new JTextField();
-        lastNamefield.setBounds(10, 135, 350, 25);
+        lastNamefield.setBounds(10, 1000, 350, 25);
         lastNamefield.setBackground(commonconstant.SECONDARY_COLOR);
         lastNamefield.setForeground(commonconstant.TEXT_COLOR);
         lastNamefield.setFont(new Font("Dialog", Font.PLAIN, 24));
@@ -61,12 +69,12 @@ public class Appoinment extends homepage {
 
 
         JLabel firstname = new JLabel("First Name");
-        firstname.setBounds(10, 160, 300, 25);
+        firstname.setBounds(10, 1000, 300, 25);
         firstname .setForeground(commonconstant.TEXT_COLOR);
         firstname .setFont(new Font("Dialog",Font.PLAIN, 18));
 
         JTextField firstnamefield = new JTextField();
-        firstnamefield.setBounds(10, 185, 350, 25);
+        firstnamefield.setBounds(10, 1000, 350, 25);
         firstnamefield.setBackground(commonconstant.SECONDARY_COLOR);
         firstnamefield.setForeground(commonconstant.TEXT_COLOR);
         firstnamefield.setFont(new Font("Dialog", Font.PLAIN, 24));
@@ -78,12 +86,12 @@ public class Appoinment extends homepage {
 
 
         JLabel MI = new JLabel("Middle Name");
-        MI.setBounds(10, 210, 300, 25);
+        MI.setBounds(10, 1000, 300, 25);
         MI.setForeground(commonconstant.TEXT_COLOR);
         MI.setFont(new Font("Dialog",Font.PLAIN, 18));
 
         JTextField Mifield = new JTextField();
-        Mifield.setBounds(10, 235, 350, 25);
+        Mifield.setBounds(10, 1000, 350, 25);
         Mifield.setBackground(commonconstant.SECONDARY_COLOR);
         Mifield.setForeground(commonconstant.TEXT_COLOR);
         Mifield.setFont(new Font("Dialog", Font.PLAIN, 24));
@@ -92,12 +100,12 @@ public class Appoinment extends homepage {
         add(Mifield);
 
         JLabel gender = new JLabel("Gender");
-        gender.setBounds(10, 265, 200, 25);
+        gender.setBounds(10, 1000, 200, 25);
         gender.setForeground(commonconstant.TEXT_COLOR);
         gender.setFont(new Font("Dialog",Font.PLAIN, 24));
 
         JTextField genderflield = new JTextField();
-        genderflield.setBounds(10, 295, 200, 25);
+        genderflield.setBounds(10, 1000, 200, 25);
         genderflield.setForeground(commonconstant.TEXT_COLOR);
         genderflield.setFont(new Font("Dialog",Font.PLAIN, 24));
 
@@ -105,12 +113,12 @@ public class Appoinment extends homepage {
         add(genderflield);
 
         JLabel Address = new JLabel("Address");
-        Address.setBounds(10, 325,300, 25);
+        Address.setBounds(10, 1000,300, 25);
         Address.setForeground(commonconstant.TEXT_COLOR);
         Address.setFont(new Font("Dialog",Font.PLAIN, 24));
 
         JTextField Addressfield = new JTextField();
-        Addressfield.setBounds(10, 355, 300, 25);
+        Addressfield.setBounds(10, 1000, 300, 25);
         Addressfield.setForeground(commonconstant.TEXT_COLOR);
         Addressfield.setFont(new Font("Dialog",Font.PLAIN, 24));
 
@@ -120,12 +128,12 @@ public class Appoinment extends homepage {
 
 
         JLabel number = new JLabel("Mobile Number");
-        number.setBounds(10, 375,300, 25);
+        number.setBounds(10, 1000,300, 25);
         number.setForeground(commonconstant.TEXT_COLOR);
         number.setFont(new Font("Dialog",Font.PLAIN, 24));
 
         JTextField numberfield = new JTextField();
-        numberfield.setBounds(10, 400, 300, 25);
+        numberfield.setBounds(10, 1000, 300, 25);
         numberfield.setForeground(commonconstant.TEXT_COLOR);
         numberfield.setFont(new Font("Dialog",Font.PLAIN, 24));
 
@@ -165,14 +173,16 @@ public class Appoinment extends homepage {
         submitButton.addMouseListener(new MouseAdapter(){
             public void mouseClicked(MouseEvent e) {
 
-                        Appoinment.this.dispose();
-                        new home().setVisible(true);
+
+                Appoinment.this.dispose();
+                new home().setVisible(true);
             }
 
         });
 //        submitButton.addActionListener(e -> submitAppointment());
-        appointmentTypePanel.add(submitButton);// Add the button to the appointment type panel
+        submitButton.addActionListener(e -> submitAppointment());// Add the button to the appointment type panel
 
+        appointmentTypePanel.add(submitButton);
         JButton Booknow = new JButton("Register");
         Booknow.setForeground(commonconstant.SECONDARY_COLOR);
 
@@ -180,20 +190,29 @@ public class Appoinment extends homepage {
 
         Booknow.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         Booknow.setBackground(commonconstant.BUTTON_COLOR);
-        Booknow.setBounds(300, 520, 250,50);
+        Booknow.setBounds(80, 600, 250,50);
         Booknow.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 //database validation for users
-                int Id = Integer.parseInt(IdField.getText());
+               int Id = Integer.parseInt(IdField.getText());
                 String LastName = lastNamefield.getText();
                 String firstname = firstnamefield.getText();
                 String MI = Mifield.getText();
                 String gender = genderflield.getText();
                 String Address = Addressfield.getText();
                 int number = Integer.parseInt(numberfield.getText());
-                String appointment = generalCheckup.getText();
-                      appointment = dentalCheckup.getText();
-                      appointment = eyeCheckup.getText();
+                appointmentTypePanel.setVisible(true);
+                String appointment = null;
+
+                if (selectedAppointmentType != null) {
+
+
+                    appointment = selectedAppointmentType.getText();
+                } else {
+                    JOptionPane.showMessageDialog(Appoinment.this, "Please select an appointment type");
+                    return; // Exit the method if no appointment type is selected
+                }
+
 
 
 
@@ -202,9 +221,12 @@ public class Appoinment extends homepage {
 
 
                         home home = new home();
-                        appointmentTypePanel.setVisible(true);
+                        Appoinment.this.dispose();
+                        new home().setVisible(true);
+
 
                         JOptionPane.showMessageDialog(home, "Booked account successfully");
+
 
                     }else {
                         JOptionPane.showMessageDialog(Appoinment.this, "Error: Name already taken");
@@ -239,4 +261,22 @@ public class Appoinment extends homepage {
 
         return true;
     }
-}
+    // Add this method
+    private void submitAppointment() {
+        ButtonModel selectedModel = appointmentTypeGroup.getSelection();
+        if (selectedModel != null) {
+            for (Enumeration<AbstractButton> buttons = appointmentTypeGroup.getElements(); buttons.hasMoreElements();) {
+                AbstractButton button = buttons.nextElement();
+                if (button.getModel() == selectedModel) {
+                    selectedAppointmentType = (JRadioButton) button;
+                    String selectedAppointment = selectedAppointmentType.getText();
+                    JOptionPane.showMessageDialog(Appoinment.this,"Selected appointment type: " + selectedAppointment);
+                    // Do something with the selected appointment type
+                    break;
+                }
+            }
+        } else {
+            JOptionPane.showMessageDialog(Appoinment.this,"No appointment type selected.");
+        }
+    }
+} 
