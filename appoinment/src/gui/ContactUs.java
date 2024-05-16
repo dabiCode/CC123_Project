@@ -82,7 +82,7 @@ private void addContactGUI(){
     cNumber.setHorizontalAlignment(SwingConstants.CENTER);
     add(cNumber);
 
-    JLabel reminder = new JLabel("Available Monday-Saturday from 8-11am to 1-4pm");
+    JLabel reminder = new JLabel("Available Monday-Saturday from 8-11am to 1-4pm only");
     reminder.setBounds(335, 600, 550, 150);
     reminder.setForeground(commonconstant.TEXT_COLOR);
     reminder.setFont(new Font("Arial", Font.BOLD,16));
