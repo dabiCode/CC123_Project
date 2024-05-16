@@ -16,7 +16,7 @@ public class launcher {
 
                 
 
-                new home().setVisible(true);
+               // new home().setVisible(true);
                 //new loginpage().setVisible(true);
                 //new AdminHome().setVisible(true);
                 //new Appoinment().setVisible(true);
@@ -25,7 +25,7 @@ public class launcher {
 
 //new home().setVisible(true);
 
-
+            //new ContactUs().setVisible(true);
 
 
               // System.out.println(MyJDBC.checkuser("username1234"));
