@@ -23,6 +23,7 @@ public class HowToAppointment extends homepage {
         // Create a JLabel to display the logo image
         JLabel logoLabel = new JLabel(logoIcon);
         logoLabel.setBounds(-10, 45, 180, 100); // Adjust the position and size as needed
+
         add(logoLabel);
 
         JLabel menulabel = new JLabel("Health");
@@ -49,35 +50,28 @@ public class HowToAppointment extends homepage {
         //new time menu for the time selection mode
 
         JLabel home = new JLabel("Home");
-        home.setFont(new Font("Dialog", Font.BOLD, 18));
+        home.setFont(new Font("Dialog", Font.BOLD, 20));
 
 
         home.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         home.setForeground(commonconstant.TEXT_COLOR);
-        home.setBounds(630, 91, 100,25);
+        home.setBounds(670, 91, 100,25);
 
 
-        //reserved space for database
-
-        JLabel Bapp= new JLabel("Book an Appointment");
-        Bapp.setFont(new Font("Dialog", Font.BOLD, 18));
-
-        Bapp.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-        Bapp.setForeground(commonconstant.TEXT_COLOR);
-        //set mouse listener
-        Bapp.addMouseListener(new MouseAdapter() {
+        home.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
                 HowToAppointment.this.dispose();
-
-                new Appoinment().setVisible(true);
+                new home().setVisible(true);
             }
         });
 
-        Bapp.setBounds(695, 91, 200,25);
+        //reserved space for database
+
 
         JLabel about= new JLabel("About Us");
-        about.setFont(new Font("Dialog", Font.BOLD, 18));
+        about.setFont(new Font("Dialog", Font.BOLD, 20));
 
         about.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         about.setForeground(commonconstant.TEXT_COLOR);
@@ -86,12 +80,51 @@ public class HowToAppointment extends homepage {
             @Override
             public void mouseClicked(MouseEvent e) {
                 HowToAppointment.this.dispose();
-
                 new About().setVisible(true);
+            }
+
+        });
+
+        about.setBounds(755, 91, 160,25);
+
+        JLabel ContactUs= new JLabel("Contact Us");
+        ContactUs.setFont(new Font("Dialog", Font.BOLD, 20));
+
+        ContactUs.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        ContactUs.setForeground(commonconstant.TEXT_COLOR);
+        //set mouse listener
+        ContactUs.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+                HowToAppointment.this.dispose();
+                new ContactUs().setVisible(true);
+
             }
         });
 
-        about.setBounds(900, 91, 160,25);
+        ContactUs.setBounds(860, 91, 200,25);
+
+        // new edit nothing button
+
+        JButton nothing = new JButton("");
+        nothing.setBounds(0, 0, 0, 0);
+        nothing.setForeground(new Color(0, 0, 0, 0));
+        nothing.setBackground(new Color(0, 0, 0, 0));
+        nothing.setFont(new Font("Dialog", Font.BOLD, 0));
+
+        nothing.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        //set mouse listener
+        nothing.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                HowToAppointment.this.dispose();
+
+                new loginpage().setVisible(true);
+
+            }
+        });
+
 
         JButton signin= new JButton("Logout");
         signin.setFont(new Font("Dialog", Font.BOLD, 18));
@@ -111,13 +144,13 @@ public class HowToAppointment extends homepage {
         signin.setBounds(1000, 81, 150,42);
 
 
+        add(nothing); // new edit
         add(menulabel);
         add(menulabel2);
         add(signin);
         add(about);
-        add(Bapp);
         add(home);
-
+        add(ContactUs);
 
         JLabel txtHow = new JLabel("HOW TO SCHEDULE AN APPOINTMENT");
         txtHow.setFont(new Font("Dialogs", Font.BOLD, 30));
@@ -129,14 +162,40 @@ public class HowToAppointment extends homepage {
         BGlightblue.setBackground(commonconstant.HOME_BG1_GRAY);
 
 
-        ImageIcon bgBlue = new ImageIcon ("appoinment/src/gui/BGlikodIMG.jpg");
-        JLabel bgBlueRight = new JLabel(bgBlue);
-        bgBlueRight.setBounds(0, 165, 1300, 650);
 
+        ImageIcon T1 = new ImageIcon ("appoinment/src/image/t1.png");
+        JLabel step1 = new JLabel(T1);
+        step1.setBounds(0, 50, 300, 300);
+
+        JLabel txtT1 = new JLabel("After logging in, click \"Book now\"");
+        txtT1.setFont(new Font("Dialogs", Font.BOLD, 17));
+        txtT1.setBounds(25, 280, 700, 50);
+        txtT1.setForeground(commonconstant.TEXT_COLOR);
+
+
+        ImageIcon bgBlue = new ImageIcon ("appoinment/src/image/BGlikodIMG.jpg");
+        JLabel bgBluePic = new JLabel(bgBlue);
+        bgBluePic.setBounds(0, 165, 1300, 650);
+
+        JPanel panel1 = new JPanel();
+        panel1.setLayout(new BorderLayout());
+
+        JLabel panelLabel = new JLabel();
+        panel1.add(panelLabel, BorderLayout.CENTER);
+        panel1.setBounds(0, 0, 1300, 150);
+
+
+
+        add(panel1); // white panel above
+        BGlightblue.add(txtT1);
+        BGlightblue.add(step1);
         tutorialPanel.add(txtHow);
         tutorialPanel.add(BGlightblue);
+        tutorialPanel.add(bgBluePic);
         add(tutorialPanel);
-        tutorialPanel.add(bgBlueRight);
+
+
+
 
 
 
